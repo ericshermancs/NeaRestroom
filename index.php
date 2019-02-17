@@ -287,6 +287,11 @@ Which genders have restroom access here?
 		
 			<input type="radio" name="handicap" value="yes"> Yes<br>
 			<input type="radio" name="handicap" value="no"> No<br>
+
+		<h1>Stall Door/Floor Gap</h1>
+		Is there a gap between the floor and the bottom of the stall door, or from the top of the stall to the ceiling?<br>
+			<input type="checkbox" name="top_stall_gap" value="top stall gap">Top Stall Gap<br>
+			<input type="checkbox" name="bottom_stall_gap" value="bottom stall gap">Bottom Stall Gap<br>
 		
 
 		<h1>Hand-Drying Options</h1>
