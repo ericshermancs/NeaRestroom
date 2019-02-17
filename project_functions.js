@@ -9,7 +9,7 @@ function mapPlacement() {
 		}).addTo(mymap);
 }
 mapPlacement();
-
+/*
 function addBathroom (name, cleanliness, rating, sinks, dry, gender, latitude, longitude, unique_id) {
 	var d = new Date();
 	var n = d.toString();
@@ -48,3 +48,4 @@ function rateBathroom(br, userRating, userCleanliness, userComment, isReport=fal
 function update(br){
 	null;
 }
+*/
