@@ -26,7 +26,7 @@
         elseif(!is_array($_POST['baby'])){
             $_POST['baby'] = array($_POST['baby']);
         }
-        
+
         if(!isset($_POST['dry'])){
             $_POST['dry'] = array();
         }
@@ -41,7 +41,6 @@
             'cleanliness_level' => $_POST['cleanliness_level'],
             'overall_rating' => $_POST['overall_rating'],
             'sinks' => $_POST['sinks'],
-            'dry' => $_POST['dry'],
             'gender' => $_POST['gender'],
             'latitude' => $_POST['latitude'],
             'longitude' => $_POST['longitude'],
