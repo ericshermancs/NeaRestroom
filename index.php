@@ -87,7 +87,8 @@
 			html += "<br> Cleanliness Rating: "+ j[i].cleanliness_level;
 			html += "<br> Gender: "+j[i].gender +". Distance: " + 
 			distanceInYdBetweenEarthCoordinates(j[i].latitude, j[i].longitude, userLat, userLon)+" Yds";
-			mark.bindPopup(j[i].reviews[rl-1].comment.substring(0,50));
+			html += "<br> "+ j[i].reviews[rl-1].comment.substring(0,50)
+			mark.bindPopup(html);
 			mark.addTo(mymap);
 		}
 		console.log(j);
