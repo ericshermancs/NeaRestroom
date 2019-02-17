@@ -25,7 +25,7 @@
 	</style>
 
 	<?php
-		include updateDB.php;
+		include 'updateDB.php';
 	?>
 
 </head>
