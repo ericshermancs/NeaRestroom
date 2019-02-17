@@ -14,6 +14,14 @@
         $cleanliness_level = $_POST['cleanliness_level'];
         $overall_rating = $_POST['overall_rating'];
         $comment = $_POST['comment'];
+
+        $review = array('cleanliness_level' => $cleanliness_level,
+                        'overall_rating' => $overall_rating,
+                        'comment' => $comment);
+        array_push($restroom['reviews'], $review);
+        $db_str = json_encode($json);
+        file_put_contents('database.json', $db_str);
+        header('Location: index.php');
     }
 
     function addRestroom (){
