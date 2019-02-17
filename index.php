@@ -650,7 +650,7 @@
                     L.latLng(window.userLat, window.userLon),
                     L.latLng(j[closest_index].latitude, j[closest_index].longitude)
                 ],
-                collapsible: true,
+                
                 
             }).addTo(mymap);
 
