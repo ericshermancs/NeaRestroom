@@ -54,6 +54,7 @@
         $str = file_get_contents('database.json');
         $json = json_decode($str, true);
         array_push($json, $br);
+        print_r($json);
         $db_str = json_encode($json);
         file_put_contents('database.json', $db_str);
         
