@@ -2,8 +2,10 @@
     function find_review($unique_id){
         $database = file_get_contents('database.json');
         $json = json_decode($database, true);
+        print_r($json);
         $index; 
         for($i = 0; $i < sizeof(json); $i++){
+            echo $index."<br>";
             if($json[$i]['unique_id'] == $unique_id){
                 $index = $i; 
                 break; 
