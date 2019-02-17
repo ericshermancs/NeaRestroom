@@ -546,7 +546,7 @@ window.onclick = function(event) {
 		L.Routing.control({
 		  waypoints: [
 		    L.latLng(window.userLat, window.userLon),
-		    L.latLng(j[i].latitude, j[i].longitude)
+		    L.latLng(j[closest_index].latitude, j[closest_index].longitude)
 		  ]
 		}).addTo(mymap);
 	}
