@@ -384,7 +384,7 @@
                     </script>
 			    	 <h1>Comment</h1>
                     <p>Do you have anything further to say? Any comments that express something about the bathroom that isn't clearly stated in the previous fields?</p>
-			    	<input type="text" name="comment">
+			    	<input type="textfield" name="comment">
 			    	<input type="submit" name="submit">
 			    </form>
 			  </div>
