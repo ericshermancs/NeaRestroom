@@ -36,9 +36,9 @@
 <body>
 
     <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">≡</button>
+        <button id="myBtn" class="dropbtn">Add New Bathroom</button>
         <div id="myDropdown" class="dropdown-content">
-            <a id="myBtn" style="font-family: Arial Black, Gadget, sans-serif; size: 20pt">Add New Bathroom</a>
+            <!--<a id="myBtn" style="font-family: Arial Black, Gadget, sans-serif; size: 20pt">Add New Bathroom</a>-->
 
             <!-- The Modal -->
             <div id="myModal" class="modal">
@@ -543,6 +543,7 @@
             // When the user clicks on the button, open the modal 
             btn.onclick = function() {
                 modal.style.display = "block";
+                myFunction();
             }
 
             // When the user clicks on <span> (x), close the modal
