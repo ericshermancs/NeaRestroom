@@ -93,8 +93,7 @@
 				j[i].reviews[rl-1].comment.substring(50,j[i].reviews[rl-1].comment.length) + '</span>';
 				html += '<button onclick="readMore()" id="myBtn'+i+'">Read more</button>';
 				html += '<style>#more'+i+' {display: none;}</style>';
-				html += `
-				<script>
+				html += `<script>
 				function myFunction() {
 				  var dots = document.getElementById("dots${i}");
 				  var moreText = document.getElementById("more${i}");
