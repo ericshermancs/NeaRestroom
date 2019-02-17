@@ -63,7 +63,7 @@
         //print_r($json);
         $db_str = json_encode($json);
         file_put_contents('database.json', $db_str);
-        header('index.php');
+        header('Location: index.php');
         
     }
 
