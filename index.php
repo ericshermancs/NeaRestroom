@@ -624,10 +624,14 @@
                 html += "<br> Cleanliness Rating: " + j[i].cleanliness_level;
                 html += "<br> Gender: " + j[i].gender + ". Distance: " +
                     dist + " Yds";
+
+                html += "<br> " + j[i].reviews[rl - 1].comment;
+                 /*
                 html += "<br> " + j[i].reviews[rl - 1].comment.substring(0, 50);
                 if (j[i].reviews[rl - 1].comment.length > 50) {
                     html += '...';
                 }
+                */
                 html += "<br> <button onclick=showRateMenu(" + j[i].unique_id + ")>Rate this bathroom</button>";
                 mark.bindPopup(html);
                 mark.addTo(mymap);
@@ -646,7 +650,7 @@
                     L.latLng(window.userLat, window.userLon),
                     L.latLng(j[closest_index].latitude, j[closest_index].longitude)
                 ],
-                collapsible: "true",
+                collapsible: true,
                 
             }).addTo(mymap);
 
