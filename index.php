@@ -515,13 +515,16 @@ window.onclick = function(event) {
 		});
 
 		var i;
+		var closest_index;
+		var shortest_distance = -1;
 		for(i = 0; i < j.length; i++){
+			let dist = Math.floor(distanceInYdBetweenEarthCoordinates(j[i].latitude, j[i].longitude, window.userLat, window.userLon));
 			let mark = L.marker([j[i].latitude,j[i].longitude], {icon: poopEmoji});
 			let rl = j[i].reviews.length;
 			let html = "Average Rating: "+j[i].overall_rating;
 			html += "<br> Cleanliness Rating: "+ j[i].cleanliness_level;
 			html += "<br> Gender: "+j[i].gender +". Distance: " + 
-			Math.floor(distanceInYdBetweenEarthCoordinates(j[i].latitude, j[i].longitude, window.userLat, window.userLon))+" Yds";
+			dist +" Yds";
 			html += "<br> "+ j[i].reviews[rl-1].comment.substring(0,50);
 			if(j[i].reviews[rl-1].comment.length > 50){
 				html += '...';
@@ -529,13 +532,21 @@ window.onclick = function(event) {
 			html +="<br> <button>Rate this bathroom</button>";
 			mark.bindPopup(html);
 			mark.addTo(mymap);
+			if(shortest_distance < 0){
+				shortest_distance = dist;
+				closest_index = i;
+			}
+			else if(dist < shortest_distance){
+				shortest_distance = dist;
+				closest_index = i;
+			}
 		}
 		console.log(j);
 		console.log(j[1].latitude, j[1].longitude)
 		L.Routing.control({
 		  waypoints: [
 		    L.latLng(window.userLat, window.userLon),
-		    L.latLng(j[1].latitude, j[1].longitude)
+		    L.latLng(j[i].latitude, j[i].longitude)
 		  ]
 		}).addTo(mymap);
 	}
