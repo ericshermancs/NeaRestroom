@@ -46,9 +46,9 @@
 		id: 'mapbox.light'
 	}).addTo(map);
 	
-	<?php readDB();?>
-	//console.log("<?php echo readDB(); ?>"); 
-	//console.log(j);
+	var j = <?php readDB();?>
+	
+	console.log(j);
 </script>
 
 
