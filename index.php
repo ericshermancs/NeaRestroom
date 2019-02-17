@@ -110,7 +110,10 @@
 
                                     function toilets0(number) {
                                         var string = "";
-                                        for (var i = 1; i <= number; i++) string += "🚽";
+                                        console.log(number);
+                                        for (var i = 1; i <= number; i++) {
+                                        	string += "🚽";
+                                        }
                                         string += (" " + number);
                                         return string;
                                     }
