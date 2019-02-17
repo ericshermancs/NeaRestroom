@@ -52,7 +52,7 @@
 		var j = <?php echo readDB();?>;
 
 		var poopEmoji = L.icon({
-			iconUrl: 'poop_emoji.png', 
+			iconUrl: 'images/poop_emoji.png', 
 			iconSize: [28, 34],
 			iconAnchor: [64, 122],
 			popupAnchor: [-3, -76]
