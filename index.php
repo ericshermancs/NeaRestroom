@@ -32,7 +32,7 @@
 </head>
 <body>
 
-	<div class="dropdown">
+<div class="dropdown">
   <button onclick="myFunction()" class="dropbtn">≡</button>
   <div id="myDropdown" class="dropdown-content">
     <a id="myBtn" style="font-family: Arial Black, Gadget, sans-serif; size: 20pt">Add New Bathroom</a>
@@ -330,8 +330,11 @@ Which genders have restroom access here?
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
-  position: relative;
+	overflow: hidden;
+  position: fixed;
   display: inline-block;
+  top: 0;
+  
 }
 
 /* Dropdown Content (Hidden by Default) */
