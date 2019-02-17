@@ -609,7 +609,7 @@
             }).addTo(mymap);
 
             var j = <?php echo readDB();?>;
-
+            console.log(j);
             var poopEmoji = L.icon({
                 iconUrl: 'images/poop_emoji.png',
                 iconSize: [28, 34],
