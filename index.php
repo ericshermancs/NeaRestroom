@@ -385,6 +385,8 @@
 			    	 <h1>Comment</h1>
                     <p>Do you have anything further to say? Any comments that express something about the bathroom that isn't clearly stated in the previous fields?</p>
 			    	<input type="textfield" name="comment">
+			    	<input type="hidden" name="action" value="update">
+			    	<input type="hidden" name="unique_id" id='unique_id_editform'>
 			    	<input type="submit" name="submit">
 			    </form>
 			  </div>
@@ -498,6 +500,7 @@
         	function showRateMenu(unique_id){
         		var modal = document.getElementById("myModal2");
         		modal.style.display = 'block';
+        		document.getElementById('unique_id_editform').value=unique_id;
         	}
             /* When the user clicks on the button, 
             toggle between hiding and showing the dropdown content */
