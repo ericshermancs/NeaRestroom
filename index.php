@@ -89,7 +89,29 @@
 			Math.floor(distanceInYdBetweenEarthCoordinates(j[i].latitude, j[i].longitude, userLat, userLon))+" Yds";
 			html += "<br> "+ j[i].reviews[rl-1].comment.substring(0,50);
 			if(j[i].reviews[rl-1].comment.length > 50){
-				html += '...'
+				html += '<span id="dots'+i+'">...</span><span id="more'+i+'">' + 
+				j[i].reviews[rl-1].comment.substring(50,j[i].reviews[rl-1].comment.length) + '</span>';
+				html += '<button onclick="readMore()" id="myBtn'+i+'">Read more</button>';
+				html += '<style>#more'+i+' {display: none;}</style>';
+				html += `
+				<script>
+				function myFunction() {
+				  var dots = document.getElementById("dots`+i+`");
+				  var moreText = document.getElementById("more`+i+`");
+				  var btnText = document.getElementById("myBtn`+i+`");
+
+				  if (dots`+i+`.style.display === "none") {
+				    dots.style.display = "inline";
+				    btnText.innerHTML = "Read more"; 
+				    moreText.style.display = "none";
+				  } else {
+				    dots.style.display = "none";
+				    btnText.innerHTML = "Read less"; 
+				    moreText.style.display = "inline";
+				  }
+				}
+				</script>
+				`
 			}
 			mark.bindPopup(html);
 			mark.addTo(mymap);
