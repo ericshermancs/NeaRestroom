@@ -335,7 +335,12 @@
         <div id="myModal2" class="modal">
         	  <div class="modal-content">
 			    <span class="close" onclick="(function(){document.getElementById('myModal2').style.display='none'})();">&times;</span>
-			    <p>Some text in the Modal..</p>
+			    <form action="updateDB.php" method="POST">
+			    	<input type="range" name="cleanliness_level" min="1" max="10" value="10" class="slider" id="myRange3">
+			    	<input type="range" name="overall_rating" min="1" max="10" value="10" class="slider" id="myRange4">
+			    	<input type="text" name="comment">
+			    	<input type="submit" name="submit">
+			    </form>
 			  </div>
         </div>
         <style>
