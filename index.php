@@ -32,6 +32,427 @@
 </head>
 <body>
 
+	<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">≡</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a id="myBtn" style="font-family: Arial Black, Gadget, sans-serif; size: 20pt">Add New Bathroom</a>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>
+
+<form action="updateDB.php" method="POST" id="form">
+	<h1>Bathroom Name</h1>
+	What is the name of the bathroom? Include Location<br>
+	<input type="text" name="name"><br>
+<style>
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<h1>Overall Rating</h1>
+<p>Drag the slider to indicate overall rating of the bathroom</p>
+
+<div class="slidecontainer">
+  <input type="range" name= "overall_rating" min="1" max="10" value="10" class="slider" id="myRange">
+  <p>Value: <span id="demo"></span></p>
+</div>
+
+<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = "🚽🚽🚽🚽🚽🚽🚽🚽🚽🚽 10";
+
+function toilets(number){
+	var string="";
+	for(var i=1;i<=number;i++) string+="🚽";
+    string+=(" "+number);
+    return string;
+}
+
+slider.oninput = function() {
+  output.innerHTML = toilets(this.value);
+}
+</script>
+<br>
+
+<style>
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<h1>Cleanliness Level</h1>
+<p>Drag the slider to indicate overall cleanlines level</p>
+
+<div class="slidecontainer">
+  <input type="range" name="cleanliness_level" min="1" max="10" value="10" class="slider" id="myRange1">
+  <p>Value: <span id="demo1"></span></p>
+</div>
+
+<script>
+var slider2 = document.getElementById("myRange1");
+var output2 = document.getElementById("demo1");
+output2.innerHTML = "🚽🚽🚽🚽🚽🚽🚽🚽🚽🚽 10";
+
+function toilets(number){
+	var string="";
+	for(var i=1;i<=number;i++) string+="🚽";
+    string+=(" "+number);
+    return string;
+}
+
+slider2.oninput = function() {
+  output2.innerHTML = toilets(this.value);
+}
+</script>
+
+
+		<style>
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+</style>
+<body>
+
+<h1>Gender Access</h1>
+Which genders have restroom access here?
+  <br>
+	<input type="radio" name="gender" value="men">Men<br>
+	<input type="radio" name="gender" value="women">Women<br>
+	<input type="radio" name="gender" value="gender_neutral">Gender-Neutral<br>
+
+
+<br>
+		<h1>Diaper-Change/Breastfeeding</h1>
+		Is there a diaper-changing/breastfeeding area?
+    <br>
+		
+			<input type="checkbox" name="baby" value="diaper_changing">Diaper-Changing<br>
+			<input type="checkbox" name="baby" value="breastfeeding">Breastfeeding<br>
+		<br>
+
+		<h1>Number of Sinks</h1>
+		How many sinks are there?<br>
+
+			  Number:<br>
+			<input type="radio" name="sinks" value="0"> 0 
+		  	<input type="radio" name="sinks" value="1"> 1 
+		 	<input type="radio" name="sinks" value="2"> 2 
+		  	<input type="radio" name="sinks" value="3"> 3 
+		  	<input type="radio" name="sinks" value="4"> 4 
+		  	<input type="radio" name="sinks" value="5"> 5+
+		  	<br>
+		
+
+		<h1>Handicap Services</h1>
+		Are there accomodations for people with disabilities?<br>
+		
+			<input type="radio" name="handicap" value="yes"> Yes<br>
+			<input type="radio" name="handicap" value="no"> No<br>
+		
+
+		<h1>Hand-Drying Options</h1>
+		What hand drying options are there?<br>
+		
+			<input type="checkbox" name="dry" value="blowdryer"> Blowdryer<br>
+			<input type="checkbox" name="dry" value="paper_towel">Paper Towel<br>
+    <br>
+
+    <h1>Comment</h1>
+    <p>Do you have anything further to say? Any comments that express something about the bathroom that isn't clearly stated in the previous fields?</p>
+    <input type="text" name='comment'>
+		
+
+		<input type="hidden" name="action" value="add">
+    <input type="hidden" name="latitude" id="latitude">
+    <input type="hidden" name="longitude" id="longitude">
+    <br>
+    <br>
+		<input type="submit" name="submit">
+	</form>
+
+    </p>
+  </div>
+
+</div>
+  </div>
+  <style>
+  	/* Dropdown Button */
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+  </style>
+  <script>
+  	/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function doStuff(position) {
+  document.getElementById("myDropdown").classList.toggle("show");
+  var userLat = position.coords.latitude;
+  var userLon = position.coords.longitude;
+  document.getElementById('latitude').value = userLat;
+  document.getElementById('longitude').value = userLon;
+}
+function myFunction(){
+  navigator.geolocation.getCurrentPosition(doStuff);
+
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+  </script>
+</div>
+
 <div id='map'></div>
 
 <!--<script src="project_functions.js" type="text/javascript"></script>-->
