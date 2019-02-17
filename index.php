@@ -25,9 +25,7 @@
             width: 100%;
             height: 100%;
         }
-    	.leaflet-control-container .leaflet-routing-container-hide {
-        display: none;
-    }
+
     </style>
 
     <?php
@@ -647,7 +645,8 @@
                 waypoints: [
                     L.latLng(window.userLat, window.userLon),
                     L.latLng(j[closest_index].latitude, j[closest_index].longitude)
-                ]
+                ],
+                show: false
             }).addTo(mymap);
         }
         /*
