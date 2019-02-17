@@ -42,7 +42,7 @@
     }
 
     function readDB(){
-        //return "hi";
+        return "hi";
         return file_get_contents('database.json');
     }
     if(isset($_POST['action'])){
