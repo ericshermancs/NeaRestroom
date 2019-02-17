@@ -118,6 +118,7 @@
                                 slider0.oninput = function() {
                                     output0.innerHTML = toilets0(this.value);
                                 }
+                                console.log(slider0);
                             </script>
                             <br>
 
