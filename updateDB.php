@@ -23,6 +23,7 @@
             $_POST['baby'] = array();
         }
         echo 'HAI';
+        /*
         return;
         elseif(!is_array($_POST['baby'])){
             $_POST['baby'] = array($_POST['baby']);
@@ -57,6 +58,7 @@
         array_push($json, $br);
         $db_str = json_encode($json);
         file_put_contents('database.json', $db_str);
+        */
     }
 
     function readDB(){
