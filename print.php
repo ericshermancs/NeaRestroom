@@ -12,7 +12,7 @@
             }
         }
         //echo $index."<br>";
-        echo '<div style="font-size: 25; text-align: justify;">';
+        echo '<div style="font-size: 30; text-align: justify; text-align-last: center;">';
         for($i = 0; $i < sizeof($json[$index]['reviews']); $i++){
             $review = $json[$index]['reviews'][$i];
             //print_r($review);
