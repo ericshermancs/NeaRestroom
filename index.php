@@ -332,7 +332,9 @@
             </div>
 
         </div>
-        <div id="myModal2" class="modal"></div>
+        <div id="myModal2" class="modal">
+        	
+        </div>
         <style>
             /* Dropdown Button */
             
@@ -439,6 +441,10 @@
             }
         </style>
         <script>
+        	function showRateMenu(unique_id){
+        		var modal = document.getElementById("modal2");
+        		modal.style.display = 'block';
+        	}
             /* When the user clicks on the button, 
             toggle between hiding and showing the dropdown content */
             function doStuff() {
@@ -560,7 +566,7 @@
                 if (j[i].reviews[rl - 1].comment.length > 50) {
                     html += '...';
                 }
-                html += "<br> <button onclick=funcWithParam(" + j[i].unique_id + ")>Rate this bathroom</button>";
+                html += "<br> <button onclick=showRateMenu(" + j[i].unique_id + ")>Rate this bathroom</button>";
                 mark.bindPopup(html);
                 mark.addTo(mymap);
                 if (shortest_distance < 0) {
