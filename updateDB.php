@@ -23,7 +23,7 @@
         echo "<br>";
         print_r($review);
         echo "<br>";
-        print_r($json)
+        print_r($json);
         $db_str = json_encode($json);
         file_put_contents('database.json', $db_str);
         //header('Location: index.php');
