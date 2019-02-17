@@ -97,8 +97,8 @@
 </div>
 
 <script>
-	var userLon;
-	var userLat;
+	var window.userLon;
+	var window.userLat;
 var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
 output.innerHTML = "🚽🚽🚽🚽🚽🚽🚽🚽🚽🚽 10";
@@ -411,8 +411,8 @@ toggle between hiding and showing the dropdown content */
 function doStuff() {
   document.getElementById("myDropdown").classList.toggle("show");
 
-  document.getElementById('latitude').value = userLat;
-  document.getElementById('longitude').value = userLon;
+  document.getElementById('latitude').value = window.userLat;
+  document.getElementById('longitude').value = window.userLon;
 }
 function myFunction(){
 	doStuff();
@@ -489,9 +489,9 @@ window.onclick = function(event) {
 	}
 
 	function getRoute(position){
-		userLat = position.coords.latitude;
-		userLon = position.coords.longitude;
-		var mymap = L.map('map').setView([userLat, userLon], 13);
+		window.userLat = position.coords.latitude;
+		window.userLon = position.coords.longitude;
+		var mymap = L.map('map').setView([window.userLat, window.userLon], 13);
 		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 				maxZoom: 18,
 				attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
@@ -516,7 +516,7 @@ window.onclick = function(event) {
 			let html = "Average Rating: "+j[i].overall_rating;
 			html += "<br> Cleanliness Rating: "+ j[i].cleanliness_level;
 			html += "<br> Gender: "+j[i].gender +". Distance: " + 
-			Math.floor(distanceInYdBetweenEarthCoordinates(j[i].latitude, j[i].longitude, userLat, userLon))+" Yds";
+			Math.floor(distanceInYdBetweenEarthCoordinates(j[i].latitude, j[i].longitude, window.userLat, window.userLon))+" Yds";
 			html += "<br> "+ j[i].reviews[rl-1].comment.substring(0,50);
 			if(j[i].reviews[rl-1].comment.length > 50){
 				html += '...';
@@ -529,7 +529,7 @@ window.onclick = function(event) {
 		console.log(j[1].latitude, j[1].longitude)
 		L.Routing.control({
 		  waypoints: [
-		    L.latLng(userLat, userLon),
+		    L.latLng(window.userLat, window.userLon),
 		    L.latLng(j[1].latitude, j[1].longitude)
 		  ]
 		}).addTo(mymap);
