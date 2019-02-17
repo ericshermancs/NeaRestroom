@@ -56,13 +56,14 @@
                                'cleanliness_level' => $_POST['cleanliness_level'],
                                 'comment' => $_POST['comment']))
         );
-        print_r($br);
+        //print_r($br);
         $str = file_get_contents('database.json');
         $json = json_decode($str, true);
         array_push($json, $br);
-        print_r($json);
+        //print_r($json);
         $db_str = json_encode($json);
         file_put_contents('database.json', $db_str);
+        header('index.php');
         
     }
 
