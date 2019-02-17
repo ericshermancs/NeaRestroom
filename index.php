@@ -400,6 +400,7 @@
                 font-size: 30px;
                 border: none;
                 cursor: pointer;
+                opacity: .3;
             }
             /* Dropdown button on hover & focus */
             
