@@ -99,13 +99,16 @@
                             </div>
 
                             <script>
-                            	try{
-	                                var window.userLon;
-	                                var window.userLat;
-	                            }
-	                            catch(err){
+                            	function coord(){
+	                            	try{
+		                                var window.userLon;
+		                                var window.userLat;
+		                            }
+		                            catch(err){
 
-	                            }
+		                            }
+		                        }
+		                        coord();
                                 var slider0 = document.getElementById("myRange0");
                                 var output0 = document.getElementById("demo0");
                                 output0.innerHTML = "🚽🚽🚽🚽🚽🚽🚽🚽🚽🚽 10";
