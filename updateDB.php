@@ -25,14 +25,14 @@
         elseif(!is_array($_POST['baby'])){
             $_POST['baby'] = array($_POST['baby']);
         }
-        /*
+
         if(!isset($_POST['dry'])){
             $_POST['dry'] = array();
         }
         elseif(!is_array($_POST['dry'])){
             $_POST['dry'] = array($_POST['dry']);
         }
-        return;
+        /*
         $categories = array($_POST['gender']);
         if($_POST['handicap']=='yes'){
             array_push($categories,'handicap');
