@@ -89,9 +89,6 @@
                                     cursor: pointer;
                                 }
                             </style>
-                            </head>
-
-                            <body>
 
                                 <h1>Overall Rating</h1>
                                 <p>Drag the slider to indicate overall rating of the bathroom</p>
