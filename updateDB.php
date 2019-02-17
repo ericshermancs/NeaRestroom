@@ -39,7 +39,9 @@
         }
 
         $categories = array_merge($categories, $_POST['dry'], $_POST['baby']);
-        
+        if(!isset($_POST['comment'])){
+            $_POST['comment'] = '';
+        }
         $br = array(
             'name' => $_POST['name'],
             'cleanliness_level' => $_POST['cleanliness_level'],
@@ -50,7 +52,9 @@
             'longitude' => $_POST['longitude'],
             'unique_id' => $time,
             'categories' => $categories,
-            'reviews' => array()
+            'reviews' => array('overall_rating' => $_POST['overall_rating']
+                               'cleanliness_level' => $_POST['cleanliness_level']
+                                'comment' => $_POST['comment'])
         );
         print_r($br);
         $str = file_get_contents('database.json');
