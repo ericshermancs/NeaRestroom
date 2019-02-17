@@ -39,7 +39,7 @@
         }
 
         $categories = array_merge($categories, $_POST['dry'], $_POST['baby']);
-        /*
+        
         $br = array(
             'name' => $_POST['name'],
             'cleanliness_level' => $_POST['cleanliness_level'],
@@ -49,14 +49,14 @@
             'latitude' => $_POST['latitude'],
             'longitude' => $_POST['longitude'],
             'unique_id' => $time,
-            'categories' => $categories;
+            'categories' => $categories
         );
         $str = file_get_contents('database.json');
         $json = json_decode($str, true);
         array_push($json, $br);
         $db_str = json_encode($json);
         file_put_contents('database.json', $db_str);
-        */
+        
     }
 
     function readDB(){
