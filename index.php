@@ -782,7 +782,7 @@ slider2.oninput = function() {
   	/* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function doStuff(position) {
-  document.getElementById("myDropdown").classList.toggle("show");
+  document.getElementById("myModal").classList.toggle("show");
   var userLat = position.coords.latitude;
   var userLon = position.coords.longitude;
   document.getElementById('latitude').value = userLat;
