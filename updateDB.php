@@ -6,7 +6,7 @@
         $restroom; 
         for ($i = 0; $i < sizeof($json); $i++){
             if($json[$i]['unique_id'] == $unique_id){
-                $restroom = $json[$i]['unique_id'];
+                $restroom = $json[$i];
                 break; 
             }
         }
@@ -19,11 +19,12 @@
                         'overall_rating' => $overall_rating,
                         'comment' => $comment);
         array_push($restroom['reviews'], $review);
-        print_r($restroom);
+        /*print_r($restroom);
         echo "<br>";
         print_r($review);
         echo "<br>";
         print_r($json);
+        */
         $db_str = json_encode($json);
         file_put_contents('database.json', $db_str);
         //header('Location: index.php');
