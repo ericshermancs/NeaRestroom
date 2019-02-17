@@ -15,6 +15,7 @@
         $overall_rating = $_POST['overall_rating'];
         $comment = $_POST['comment'];
     }
+
     function addRestroom (){
         //$name, $cleanliness_level, $rating, $sinks, $dry, $gender, $latitude, $longitude, $unique_id, $categories;
         $time = microtime();
@@ -39,11 +40,16 @@
         $db_str = json_encode($json);
         file_put_contents('database.json', $db_str);
     }
-    
+
+    function readDB(){
+        echo file_get_contents('database.json');
+    }
+
     if($_POST['action']=='update'){
         updateRestroom();
     }
     elseif($_POST['action']=='add'){
         addRestroom();
     }
+    
 ?>

@@ -24,7 +24,10 @@
 		}
 	</style>
 
-	
+	<?php
+		include updateDB.php;
+	?>
+
 </head>
 <body>
 
@@ -43,6 +46,8 @@
 		id: 'mapbox.light'
 	}).addTo(map);
 	
+	var j = <?php readDB(); ?>; 
+	console.log(j);
 </script>
 
 
