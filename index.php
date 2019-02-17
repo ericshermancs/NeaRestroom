@@ -32,6 +32,8 @@
 </head>
 <body>
 
+
+<div id='map'></div>
 <div class="dropdown">
   <button onclick="myFunction()" class="dropbtn">≡</button>
   <div id="myDropdown" class="dropdown-content">
@@ -458,8 +460,6 @@ window.onclick = function(event) {
 }
   </script>
 </div>
-
-<div id='map'></div>
 
 <!--<script src="project_functions.js" type="text/javascript"></script>-->
 
