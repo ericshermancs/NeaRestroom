@@ -30,6 +30,7 @@
 
     <?php
 		include 'updateDB.php';
+		include 'print.php';
 	?>
 
 </head>
@@ -569,6 +570,11 @@
     <!--<script src="project_functions.js" type="text/javascript"></script>-->
 
     <script>
+
+    	function showReviews(unique_id){
+    		window.location.href = 'print.php?unique_id='+unique_id;
+    	}
+
         function degreesToRadians(degrees) {
             return degrees * Math.PI / 180;
         }
@@ -632,7 +638,8 @@
                     html += '...';
                 }
                 */
-                html += "<br> <button onclick=showRateMenu(" + j[i].unique_id + ")>Rate this bathroom</button>";
+                html += "<br> <button onclick=showRateMenu(" + j[i].unique_id + ")>Rate this bathroom</button>\ 
+                <button onclick=showReviews("+ j[i].unique_id +")></button>";
                 mark.bindPopup(html);
                 mark.addTo(mymap);
                 if (shortest_distance < 0) {
