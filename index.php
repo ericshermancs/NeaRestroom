@@ -49,7 +49,8 @@
 				id: 'mapbox.streets'
 			}).addTo(mymap);
 
-		var j = <?php echo readDB();?>
+		var j = <?php echo readDB();?>;
+
 		var poopEmoji = L.icon({
 			iconUrl: 'poop_emoji.png', 
 			iconSize: [28, 34],
