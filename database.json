@@ -1,8 +1,8 @@
 [
   {
     "unique_id": 613770,
-    "latitude": 38.98283507862747,
-    "longitude": -76.94862845252683,
+    "latitude": 38.982835078627,
+    "longitude": -76.948628452527,
     "name": "Hillel 1st Floor",
     "cleanliness_level": 6,
     "overall_rating": 7,
@@ -24,8 +24,8 @@
   },
   {
     "unique_id": 613771,
-    "latitude": 38.9830949269694,
-    "longitude": -76.9479067821948,
+    "latitude": 38.983094926969,
+    "longitude": -76.947906782195,
     "name": "Women's handicapped across street",
     "gender": "female",
     "cleanliness_level": 10,
