@@ -3,10 +3,10 @@
         $str = file_get_contents('database.json');
         $json = json_decode($str, true);
         $unique_id = $_POST['unique_id'];
-        $restroom; 
+        $restroom_index; 
         for ($i = 0; $i < sizeof($json); $i++){
             if($json[$i]['unique_id'] == $unique_id){
-                $restroom = $json[$i]['unique_id'];
+                $restroom_index = $i;
                 break; 
             }
         }
@@ -14,11 +14,35 @@
         $cleanliness_level = $_POST['cleanliness_level'];
         $overall_rating = $_POST['overall_rating'];
         $comment = $_POST['comment'];
+
+        $review = array('cleanliness_level' => $cleanliness_level,
+                        'overall_rating' => $overall_rating,
+                        'comment' => $comment);
+        $aggregate_overall = $json[$restroom_index]['overall_rating'] * sizeof($json[$restroom_index]['reviews']);
+        $aggregate_overall += $overall_rating;
+        $aggregate_cleanliness = $json[$restroom_index]['cleanliness_level'] * sizeof($json[$restroom_index]['reviews']);
+        $aggregate_cleanliness += $cleanliness_level;
+        array_push($json[$restroom_index]['reviews'], $review);
+        $average_overall = $aggregate_overall / sizeof($json[$restroom_index]['reviews']);
+        $average_cleanliness = $aggregate_cleanliness / sizeof($json[$restroom_index]['reviews']);
+        $json[$restroom_index]['overall_rating'] = $average_overall;
+        $json[$restroom_index]['cleanliness_level'] = $average_cleanliness;
+
+
+        $db_str = json_encode($json);
+        file_put_contents('database.json', $db_str);
+        header('Location: index.php');
     }
 
     function addRestroom (){
+        if(!is_numeric($_POST['latitude']) or !is_numeric($_POST['longitude'])){
+            return;
+        }
         //$name, $cleanliness_level, $rating, $sinks, $dry, $gender, $latitude, $longitude, $unique_id, $categories;
         $time = microtime();
+        $pattern = '/\s+/';
+        $replacement = '';
+        $time = preg_replace($pattern, $replacement, $time);
         if(!isset($_POST['baby'])){
             $_POST['baby'] = array();
         }

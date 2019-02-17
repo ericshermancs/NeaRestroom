@@ -25,6 +25,7 @@
             width: 100%;
             height: 100%;
         }
+
     </style>
 
     <?php
@@ -36,9 +37,9 @@
 <body>
 
     <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">≡</button>
+        <button id="myBtn" class="dropbtn">Add New Bathroom</button>
         <div id="myDropdown" class="dropdown-content">
-            <a id="myBtn" style="font-family: Arial Black, Gadget, sans-serif; size: 20pt">Add New Bathroom</a>
+            <!--<a id="myBtn" style="font-family: Arial Black, Gadget, sans-serif; size: 20pt">Add New Bathroom</a>-->
 
             <!-- The Modal -->
             <div id="myModal" class="modal">
@@ -89,24 +90,88 @@
                                     cursor: pointer;
                                 }
                             </style>
-                            </head>
 
-                            <body>
+                            <h1>Overall Rating</h1>
+                            <p>Drag the slider to indicate overall rating of the bathroom</p>
 
-                                <h1>Overall Rating</h1>
-                                <p>Drag the slider to indicate overall rating of the bathroom</p>
+                            <div class="slidecontainer">
+                                <input type="range" name="overall_rating" min="1" max="10" value="10" class="slider" id="myRange0">
+                                <p>Value: <span id="demo0"></span></p>
+                            </div>
+
+                            <script>
+
+                                var slider0 = document.getElementById("myRange0");
+                                var output0 = document.getElementById("demo0");
+                                output0.innerHTML = "🚽🚽🚽🚽🚽🚽🚽🚽🚽🚽 10";
+
+                                function toilets0(number) {
+                                    var string = "";
+                                    console.log(number);
+                                    for (var i = 1; i <= number; i++) {
+                                        string += "🚽";
+                                    }
+                                    string += (" " + number);
+                                    return string;
+                                }
+
+                                slider0.oninput = function() {
+                                    output0.innerHTML = toilets0(this.value);
+                                }
+                                console.log(slider0);
+                            </script>
+                            <br>
+
+                            <style>
+                                .slidecontainer {
+                                    width: 100%;
+                                }
+                                
+                                .slider {
+                                    -webkit-appearance: none;
+                                    width: 100%;
+                                    height: 25px;
+                                    background: #d3d3d3;
+                                    outline: none;
+                                    opacity: 0.7;
+                                    -webkit-transition: .2s;
+                                    transition: opacity .2s;
+                                }
+                                
+                                .slider:hover {
+                                    opacity: 1;
+                                }
+                                
+                                .slider::-webkit-slider-thumb {
+                                    -webkit-appearance: none;
+                                    appearance: none;
+                                    width: 25px;
+                                    height: 25px;
+                                    background: #4CAF50;
+                                    cursor: pointer;
+                                }
+                                
+                                .slider::-moz-range-thumb {
+                                    width: 25px;
+                                    height: 25px;
+                                    background: #4CAF50;
+                                    cursor: pointer;
+                                }
+                            </style>
+                   
+
+                                <h1>Cleanliness Level</h1>
+                                <p>Drag the slider to indicate overall cleanlines level</p>
 
                                 <div class="slidecontainer">
-                                    <input type="range" name="overall_rating" min="1" max="10" value="10" class="slider" id="myRange">
-                                    <p>Value: <span id="demo"></span></p>
+                                    <input type="range" name="cleanliness_level" min="1" max="10" value="10" class="slider" id="myRange1">
+                                    <p>Value: <span id="demo1"></span></p>
                                 </div>
 
                                 <script>
-                                    var window.userLon;
-                                    var window.userLat;
-                                    var slider = document.getElementById("myRange");
-                                    var output = document.getElementById("demo");
-                                    output.innerHTML = "🚽🚽🚽🚽🚽🚽🚽🚽🚽🚽 10";
+                                    var slider2 = document.getElementById("myRange1");
+                                    var output2 = document.getElementById("demo1");
+                                    output2.innerHTML = "🚽🚽🚽🚽🚽🚽🚽🚽🚽🚽 10";
 
                                     function toilets(number) {
                                         var string = "";
@@ -115,215 +180,150 @@
                                         return string;
                                     }
 
-                                    slider.oninput = function() {
-                                        output.innerHTML = toilets(this.value);
+                                    slider2.oninput = function() {
+                                        output2.innerHTML = toilets(this.value);
                                     }
+
                                 </script>
-                                <br>
 
                                 <style>
-                                    .slidecontainer {
-                                        width: 100%;
-                                    }
+                                    /* The container */
                                     
-                                    .slider {
-                                        -webkit-appearance: none;
-                                        width: 100%;
-                                        height: 25px;
-                                        background: #d3d3d3;
-                                        outline: none;
-                                        opacity: 0.7;
-                                        -webkit-transition: .2s;
-                                        transition: opacity .2s;
-                                    }
-                                    
-                                    .slider:hover {
-                                        opacity: 1;
-                                    }
-                                    
-                                    .slider::-webkit-slider-thumb {
-                                        -webkit-appearance: none;
-                                        appearance: none;
-                                        width: 25px;
-                                        height: 25px;
-                                        background: #4CAF50;
+                                    .container {
+                                        display: block;
+                                        position: relative;
+                                        padding-left: 35px;
+                                        margin-bottom: 12px;
                                         cursor: pointer;
+                                        font-size: 22px;
+                                        -webkit-user-select: none;
+                                        -moz-user-select: none;
+                                        -ms-user-select: none;
+                                        user-select: none;
                                     }
+                                    /* Hide the browser's default checkbox */
                                     
-                                    .slider::-moz-range-thumb {
-                                        width: 25px;
-                                        height: 25px;
-                                        background: #4CAF50;
+                                    .container input {
+                                        position: absolute;
+                                        opacity: 0;
                                         cursor: pointer;
+                                        height: 0;
+                                        width: 0;
+                                    }
+                                    /* Create a custom checkbox */
+                                    
+                                    .checkmark {
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        height: 25px;
+                                        width: 25px;
+                                        background-color: #eee;
+                                    }
+                                    /* On mouse-over, add a grey background color */
+                                    
+                                    .container:hover input ~ .checkmark {
+                                        background-color: #ccc;
+                                    }
+                                    /* When the checkbox is checked, add a blue background */
+                                    
+                                    .container input:checked ~ .checkmark {
+                                        background-color: #2196F3;
+                                    }
+                                    /* Create the checkmark/indicator (hidden when not checked) */
+                                    
+                                    .checkmark:after {
+                                        content: "";
+                                        position: absolute;
+                                        display: none;
+                                    }
+                                    /* Show the checkmark when checked */
+                                    
+                                    .container input:checked ~ .checkmark:after {
+                                        display: block;
+                                    }
+                                    /* Style the checkmark/indicator */
+                                    
+                                    .container .checkmark:after {
+                                        left: 9px;
+                                        top: 5px;
+                                        width: 5px;
+                                        height: 10px;
+                                        border: solid white;
+                                        border-width: 0 3px 3px 0;
+                                        -webkit-transform: rotate(45deg);
+                                        -ms-transform: rotate(45deg);
+                                        transform: rotate(45deg);
                                     }
                                 </style>
-                                </head>
 
-                                <body>
+  
 
-                                    <h1>Cleanliness Level</h1>
-                                    <p>Drag the slider to indicate overall cleanlines level</p>
+                                    <h1>Gender Access</h1> Which genders have restroom access here?
+                                    <br>
+                                    <input type="radio" name="gender" value="men">Men
+                                    <br>
+                                    <input type="radio" name="gender" value="women">Women
+                                    <br>
+                                    <input type="radio" name="gender" value="gender_neutral">Gender-Neutral
+                                    <br>
 
-                                    <div class="slidecontainer">
-                                        <input type="range" name="cleanliness_level" min="1" max="10" value="10" class="slider" id="myRange1">
-                                        <p>Value: <span id="demo1"></span></p>
-                                    </div>
+                                    <br>
+                                    <h1>Diaper-Change/Breastfeeding</h1> Is there a diaper-changing/breastfeeding area?
+                                    <br>
 
-                                    <script>
-                                        var slider2 = document.getElementById("myRange1");
-                                        var output2 = document.getElementById("demo1");
-                                        output2.innerHTML = "🚽🚽🚽🚽🚽🚽🚽🚽🚽🚽 10";
+                                    <input type="checkbox" name="baby" value="diaper_changing">Diaper-Changing
+                                    <br>
+                                    <input type="checkbox" name="baby" value="breastfeeding">Breastfeeding
+                                    <br>
+                                    <br>
 
-                                        function toilets(number) {
-                                            var string = "";
-                                            for (var i = 1; i <= number; i++) string += "🚽";
-                                            string += (" " + number);
-                                            return string;
-                                        }
+                                    <h1>Number of Sinks</h1> How many sinks are there?
+                                    <br> Number:
 
-                                        slider2.oninput = function() {
-                                            output2.innerHTML = toilets(this.value);
-                                        }
-                                    </script>
+                                    <br>
+                                    <input type="radio" name="sinks" value="0"> 0
+                                    <input type="radio" name="sinks" value="1"> 1
+                                    <input type="radio" name="sinks" value="2"> 2
+                                    <input type="radio" name="sinks" value="3"> 3
+                                    <input type="radio" name="sinks" value="4"> 4
+                                    <input type="radio" name="sinks" value="5"> 5+
+                                    <br>
 
-                                    <style>
-                                        /* The container */
-                                        
-                                        .container {
-                                            display: block;
-                                            position: relative;
-                                            padding-left: 35px;
-                                            margin-bottom: 12px;
-                                            cursor: pointer;
-                                            font-size: 22px;
-                                            -webkit-user-select: none;
-                                            -moz-user-select: none;
-                                            -ms-user-select: none;
-                                            user-select: none;
-                                        }
-                                        /* Hide the browser's default checkbox */
-                                        
-                                        .container input {
-                                            position: absolute;
-                                            opacity: 0;
-                                            cursor: pointer;
-                                            height: 0;
-                                            width: 0;
-                                        }
-                                        /* Create a custom checkbox */
-                                        
-                                        .checkmark {
-                                            position: absolute;
-                                            top: 0;
-                                            left: 0;
-                                            height: 25px;
-                                            width: 25px;
-                                            background-color: #eee;
-                                        }
-                                        /* On mouse-over, add a grey background color */
-                                        
-                                        .container:hover input ~ .checkmark {
-                                            background-color: #ccc;
-                                        }
-                                        /* When the checkbox is checked, add a blue background */
-                                        
-                                        .container input:checked ~ .checkmark {
-                                            background-color: #2196F3;
-                                        }
-                                        /* Create the checkmark/indicator (hidden when not checked) */
-                                        
-                                        .checkmark:after {
-                                            content: "";
-                                            position: absolute;
-                                            display: none;
-                                        }
-                                        /* Show the checkmark when checked */
-                                        
-                                        .container input:checked ~ .checkmark:after {
-                                            display: block;
-                                        }
-                                        /* Style the checkmark/indicator */
-                                        
-                                        .container .checkmark:after {
-                                            left: 9px;
-                                            top: 5px;
-                                            width: 5px;
-                                            height: 10px;
-                                            border: solid white;
-                                            border-width: 0 3px 3px 0;
-                                            -webkit-transform: rotate(45deg);
-                                            -ms-transform: rotate(45deg);
-                                            transform: rotate(45deg);
-                                        }
-                                    </style>
+                                    <h1>Handicap Services</h1> Are there accomodations for people with disabilities?
+                                    <br>
 
-                                    <body>
+                                    <input type="radio" name="handicap" value="yes"> Yes
+                                    <br>
+                                    <input type="radio" name="handicap" value="no"> No
+                                    <br>
 
-                                        <h1>Gender Access</h1> Which genders have restroom access here?
-                                        <br>
-                                        <input type="radio" name="gender" value="men">Men
-                                        <br>
-                                        <input type="radio" name="gender" value="women">Women
-                                        <br>
-                                        <input type="radio" name="gender" value="gender_neutral">Gender-Neutral
-                                        <br>
+                                    <h1>Stall Door/Floor Gap</h1> Is there a gap between the floor and the bottom of the stall door, or from the top of the stall to the ceiling?
+                                    <br>
+                                    <input type="checkbox" name="top_stall_gap" value="top stall gap">Top Stall Gap
+                                    <br>
+                                    <input type="checkbox" name="bottom_stall_gap" value="bottom stall gap">Bottom Stall Gap
+                                    <br>
 
-                                        <br>
-                                        <h1>Diaper-Change/Breastfeeding</h1> Is there a diaper-changing/breastfeeding area?
-                                        <br>
+                                    <h1>Hand-Drying Options</h1> What hand drying options are there?
+                                    <br>
 
-                                        <input type="checkbox" name="baby" value="diaper_changing">Diaper-Changing
-                                        <br>
-                                        <input type="checkbox" name="baby" value="breastfeeding">Breastfeeding
-                                        <br>
-                                        <br>
+                                    <input type="checkbox" name="dry" value="blowdryer"> Blowdryer
+                                    <br>
+                                    <input type="checkbox" name="dry" value="paper_towel">Paper Towel
+                                    <br>
+                                    <br>
 
-                                        <h1>Number of Sinks</h1> How many sinks are there?
-                                        <br> Number:
+                                    <h1>Comment</h1>
+                                    <p>Do you have anything further to say? Any comments that express something about the bathroom that isn't clearly stated in the previous fields?</p>
+                                    <input type="text" name='comment'>
 
-                                        <br>
-                                        <input type="radio" name="sinks" value="0"> 0
-                                        <input type="radio" name="sinks" value="1"> 1
-                                        <input type="radio" name="sinks" value="2"> 2
-                                        <input type="radio" name="sinks" value="3"> 3
-                                        <input type="radio" name="sinks" value="4"> 4
-                                        <input type="radio" name="sinks" value="5"> 5+
-                                        <br>
-
-                                        <h1>Handicap Services</h1> Are there accomodations for people with disabilities?
-                                        <br>
-
-                                        <input type="radio" name="handicap" value="yes"> Yes
-                                        <br>
-                                        <input type="radio" name="handicap" value="no"> No
-                                        <br>
-
-                                        <h1>Stall Door/Floor Gap</h1> Is there a gap between the floor and the bottom of the stall door, or from the top of the stall to the ceiling?
-                                        <br>
-                                        <input type="checkbox" name="top_stall_gap" value="top stall gap">Top Stall Gap
-                                        <br>
-                                        <input type="checkbox" name="bottom_stall_gap" value="bottom stall gap">Bottom Stall Gap
-                                        <br>
-
-                                        <h1>Hand-Drying Options</h1> What hand drying options are there?
-                                        <br>
-
-                                        <input type="checkbox" name="dry" value="blowdryer"> Blowdryer
-                                        <br>
-                                        <input type="checkbox" name="dry" value="paper_towel">Paper Towel
-                                        <br>
-                                        <br>
-
-                                        <h1>Comment</h1>
-                                        <p>Do you have anything further to say? Any comments that express something about the bathroom that isn't clearly stated in the previous fields?</p>
-                                        <input type="text" name='comment'>
-
-                                        <input type="hidden" name="action" value="add">
-                                        <input type="hidden" name="latitude" id="latitude">
-                                        <input type="hidden" name="longitude" id="longitude">
-                                        <br>
-                                        <br>
-                                        <input type="submit" name="submit">
+                                    <input type="hidden" name="action" value="add">
+                                    <input type="hidden" name="latitude" id="latitude">
+                                    <input type="hidden" name="longitude" id="longitude">
+                                    <br>
+                                    <br>
+                                    <input type="submit" name="submit">
                         </form>
 
                     </p>
@@ -333,14 +333,14 @@
 
         </div>
         <div id="myModal2" class="modal">
-        	  <div class="modal-content">
-			    <span class="close" onclick="(function(){document.getElementById('myModal2').style.display='none'})();">&times;</span>
-			    <form action="updateDB.php" method="POST">
-			    	<h1>Cleanliness Level</h1>
+            <div class="modal-content">
+                <span class="close" onclick="(function(){document.getElementById('myModal2').style.display='none'})();">&times;</span>
+                <form action="updateDB.php" method="POST">
+                    <h1>Cleanliness Level</h1>
                     <p>Drag the slider to indicate overall cleanlines level</p>
-			    	<div class="slidecontainer">
-			    		<input type="range" name="cleanliness_level" min="1" max="10" value="10" class="slider" id="myRange3">
-			    		<p>Value: <span id="demo3"></span></p>
+                    <div class="slidecontainer">
+                        <input type="range" name="cleanliness_level" min="1" max="10" value="10" class="slider" id="myRange3">
+                        <p>Value: <span id="demo3"></span></p>
                     </div>
                     <script>
                         var slider3 = document.getElementById("myRange3");
@@ -362,10 +362,10 @@
                     <h1>Overall Rating</h1>
                     <p>Drag the slider to indicate overall rating of the bathroom</p>
 
-			    	<div class="slidecontainer">
-			    		<input type="range" name="overall_rating" min="1" max="10" value="10" class="slider" id="myRange4">
-			    		<p>Value: <span id="demo4"></span></p>
-			    	</div>
+                    <div class="slidecontainer">
+                        <input type="range" name="overall_rating" min="1" max="10" value="10" class="slider" id="myRange4">
+                        <p>Value: <span id="demo4"></span></p>
+                    </div>
                     <script>
                         var slider4 = document.getElementById("myRange4");
                         var output4 = document.getElementById("demo4");
@@ -382,14 +382,14 @@
                             output4.innerHTML = toilets(this.value);
                         }
                     </script>
-			    	 <h1>Comment</h1>
+                    <h1>Comment</h1>
                     <p>Do you have anything further to say? Any comments that express something about the bathroom that isn't clearly stated in the previous fields?</p>
-			    	<input type="textfield" name="comment">
-			    	<input type="hidden" name="action" value="update">
-			    	<input type="hidden" name="unique_id" id='unique_id_editform'>
-			    	<input type="submit" name="submit">
-			    </form>
-			  </div>
+                    <input type="textfield" name="comment">
+                    <input type="hidden" name="action" value="update">
+                    <input type="hidden" name="unique_id" id='unique_id_editform'>
+                    <input type="submit" name="submit">
+                </form>
+            </div>
         </div>
         <style>
             /* Dropdown Button */
@@ -401,12 +401,14 @@
                 font-size: 30px;
                 border: none;
                 cursor: pointer;
+                opacity: .3;
             }
             /* Dropdown button on hover & focus */
             
             .dropbtn:hover,
             .dropbtn:focus {
                 background-color: #2980B9;
+                opacity: 1
             }
             /* The container <div> - needed to position the dropdown content */
             
@@ -497,11 +499,12 @@
             }
         </style>
         <script>
-        	function showRateMenu(unique_id){
-        		var modal = document.getElementById("myModal2");
-        		modal.style.display = 'block';
-        		document.getElementById('unique_id_editform').value=unique_id;
-        	}
+            function showRateMenu(unique_id) {
+                var modal = document.getElementById("myModal2");
+                modal.style.display = 'block';
+                modal.style.zIndex=10000;
+                document.getElementById('unique_id_editform').value = unique_id;
+            }
             /* When the user clicks on the button, 
             toggle between hiding and showing the dropdown content */
             function doStuff() {
@@ -543,6 +546,8 @@
             // When the user clicks on the button, open the modal 
             btn.onclick = function() {
                 modal.style.display = "block";
+                modal.style.zIndex=10000;
+                myFunction();
             }
 
             // When the user clicks on <span> (x), close the modal
@@ -619,10 +624,14 @@
                 html += "<br> Cleanliness Rating: " + j[i].cleanliness_level;
                 html += "<br> Gender: " + j[i].gender + ". Distance: " +
                     dist + " Yds";
+
+                html += "<br> " + j[i].reviews[rl - 1].comment;
+                 /*
                 html += "<br> " + j[i].reviews[rl - 1].comment.substring(0, 50);
                 if (j[i].reviews[rl - 1].comment.length > 50) {
                     html += '...';
                 }
+                */
                 html += "<br> <button onclick=showRateMenu(" + j[i].unique_id + ")>Rate this bathroom</button>";
                 mark.bindPopup(html);
                 mark.addTo(mymap);
@@ -640,10 +649,21 @@
                 waypoints: [
                     L.latLng(window.userLat, window.userLon),
                     L.latLng(j[closest_index].latitude, j[closest_index].longitude)
-                ]
+                ],
+                
+                
             }).addTo(mymap);
-        }
 
+        }
+        /*
+        try{
+	        var window.userLon;
+	        var window.userLat;
+	    }
+	    catch(err){
+
+	    }
+	    */
         navigator.geolocation.getCurrentPosition(getRoute);
     </script>
 
