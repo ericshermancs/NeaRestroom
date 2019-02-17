@@ -1,1 +1,48 @@
-[{"unique_id":613770,"latitude":38.98283507862747,"longitude":-76.94862845252683,"name":"Hillel 1st Floor","cleanliness_level":3,"ovearall_rating":4,"categories":["handicapped","soap","toiletpaper","top_stall_gap","bottom_stall_gap"],"reviews":[{"cleanliness_level":3,"overall_rating":4,"comment":"What a horrible bathroom! It had no bathroom attendant, and I had to wipe myself! There is a gap in the door the size of my mothers behind, and the toiletpaper is only 1 ply! Disgustinging"}]}]
+[
+  {
+    "unique_id": 613770,
+    "latitude": 38.98283507862747,
+    "longitude": -76.94862845252683,
+    "name": "Hillel 1st Floor",
+    "cleanliness_level": 3,
+    "ovearall_rating": 4,
+    "gender": "male",
+    "categories": [
+      "handicapped",
+      "soap",
+      "toiletpaper",
+      "top_stall_gap",
+      "bottom_stall_gap"
+    ],
+    "reviews": [
+      {
+        "cleanliness_level": 3,
+        "overall_rating": 4,
+        "comment": "What a horrible bathroom! It had no bathroom attendant, and I had to wipe myself! There is a gap in the door the size of my mothers behind, and the toiletpaper is only 1 ply! Disgustinging"
+      }
+    ]
+  },
+  {
+    "unique_id": 613771,
+    "latitude": 38.9830949269694,
+    "longitude": -76.9479067821948,
+    "name": "Women's handicapped across street",
+    "gender": "female",
+    "cleanliness_level": 5,
+    "ovearall_rating": 5,
+    "categories": [
+      "handicapped",
+      "soap",
+      "toiletpaper",
+      "top_stall_gap",
+      "bottom_stall_gap"
+    ],
+    "reviews": [
+      {
+        "cleanliness_level": 5,
+        "overall_rating": 5,
+        "comment": "Could not get inside building. I am a man and not a student here :("
+      }
+    ]
+  }
+]

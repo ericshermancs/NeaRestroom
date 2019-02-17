@@ -37,25 +37,32 @@
 <!--<script src="project_functions.js" type="text/javascript"></script>-->
 
 <script>
-	var mymap = L.map('map').setView([38.983270399999995, -76.9466368], 13);
-	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-			maxZoom: 18,
-			attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-				'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-				'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-			id: 'mapbox.streets'
-		}).addTo(mymap);
+	function getRoute(position){
+		var userLat = position.coords.latitude;
+		var userLon = position.coords.longitude;
+		var mymap = L.map('map').setView([userLat, userLon], 13);
+		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+				maxZoom: 18,
+				attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+					'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+					'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+				id: 'mapbox.streets'
+			}).addTo(mymap);
 
-	var j = <?php echo readDB();?>
+		var j = <?php echo readDB();?>
+		
+		console.log(j);
+		console.log(j[1].latitude, j[1].longitude)
+		L.Routing.control({
+		  waypoints: [
+		    L.latLng(userLat, userLon),
+		    L.latLng(j[1].latitude, j[1].longitude)
+		  ]
+		}).addTo(mymap);
+	}
+
+	navigator.geolocation.getCurrentPosition(success)
 	
-	console.log(j);
-	console.log(j[0].latitude, j[0].longitude)
-	L.Routing.control({
-	  waypoints: [
-	    L.latLng(38.982865170204036, -76.94858860360013),
-	    L.latLng(j[0].latitude, j[0].longitude)
-	  ]
-	}).addTo(mymap);
 
 </script>
 
