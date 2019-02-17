@@ -368,8 +368,14 @@ Which genders have restroom access here? Check all that apply.
   <script>
   	/* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
-function myFunction() {
+function doStuff() {
   document.getElementById("myDropdown").classList.toggle("show");
+  var userLat = position.coords.latitude;
+  var userLon = position.coords.longitude;
+}
+function myFunction(){
+  navigator.geolocation.getCurrentPosition(doStuff);
+
 }
 
 // Close the dropdown menu if the user clicks outside of it
