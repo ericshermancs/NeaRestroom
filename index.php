@@ -425,6 +425,8 @@ function myFunction(){
 
 }
 
+
+
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
@@ -529,7 +531,7 @@ window.onclick = function(event) {
 			if(j[i].reviews[rl-1].comment.length > 50){
 				html += '...';
 			}
-			html +="<br> <button onclick=myFunction()>Rate this bathroom</button>";
+			html +="<br> <button onclick=funcWithParam("+ j[i].unique_id +")>Rate this bathroom</button>";
 			mark.bindPopup(html);
 			mark.addTo(mymap);
 			if(shortest_distance < 0){
