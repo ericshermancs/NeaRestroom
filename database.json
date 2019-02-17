@@ -5,7 +5,7 @@
     "longitude": -76.94862845252683,
     "name": "Hillel 1st Floor",
     "cleanliness_level": 6,
-    "ovearall_rating": 7,
+    "overall_rating": 7,
     "gender": "male",
     "categories": [
       "handicapped",
@@ -29,7 +29,7 @@
     "name": "Women's handicapped across street",
     "gender": "female",
     "cleanliness_level": 10,
-    "ovearall_rating": 10,
+    "overall_rating": 10,
     "categories": [
       "handicapped",
       "soap",
