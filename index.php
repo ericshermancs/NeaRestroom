@@ -648,7 +648,9 @@
                 ],
                 show: false
                 
-            }).addTo(mymap);
+            });
+            c.hide();
+            c.addTo(mymap);
 
         }
         /*
