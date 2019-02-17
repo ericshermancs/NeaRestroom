@@ -33,8 +33,8 @@
 <body>
 
 
-<div id='map'></div>
-<div class="dropdown">
+<div id='map'>
+	<div class="dropdown">
   <button onclick="myFunction()" class="dropbtn">≡</button>
   <div id="myDropdown" class="dropdown-content">
     <a id="myBtn" style="font-family: Arial Black, Gadget, sans-serif; size: 20pt">Add New Bathroom</a>
@@ -459,6 +459,8 @@ window.onclick = function(event) {
   }
 }
   </script>
+</div>
+
 </div>
 
 <!--<script src="project_functions.js" type="text/javascript"></script>-->
