@@ -33,6 +33,7 @@
         elseif(!is_array($_POST['dry'])){
             $_POST['dry'] = array($_POST['dry']);
         }
+        return;
         $categories = array($_POST['gender']);
         $categories = array_merge($categories, $_POST['dry'], $_POST['baby']);
         return;
