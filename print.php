@@ -1,4 +1,5 @@
 <?php
+    function find_review(){
     $database = file_get_contents('database.json');
     $json = json_decode($database, true);
     $index; 
