@@ -97,6 +97,8 @@
 </div>
 
 <script>
+	var userLon;
+	var userLat;
 var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
 output.innerHTML = "🚽🚽🚽🚽🚽🚽🚽🚽🚽🚽 10";
@@ -487,8 +489,8 @@ window.onclick = function(event) {
 	}
 
 	function getRoute(position){
-		var userLat = position.coords.latitude;
-		var userLon = position.coords.longitude;
+		userLat = position.coords.latitude;
+		userLon = position.coords.longitude;
 		var mymap = L.map('map').setView([userLat, userLon], 13);
 		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 				maxZoom: 18,
