@@ -65,7 +65,7 @@
 		    L.latLng(userLat, userLon),
 		    L.latLng(j[1].latitude, j[1].longitude)
 		  ],
-		  createMarker: function (i, wp, np = 2) {
+		  createMarker: function (i, wp, np) {
 			if (i == 1) {
 				return L.marker(wp.latLng, {icon: poopEmoji });
 			}
