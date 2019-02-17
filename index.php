@@ -96,11 +96,11 @@
 				html += `
 				<script>
 				function myFunction() {
-				  var dots = document.getElementById("dots`+i+`");
-				  var moreText = document.getElementById("more`+i+`");
-				  var btnText = document.getElementById("myBtn`+i+`");
+				  var dots = document.getElementById("dots${i}");
+				  var moreText = document.getElementById("more${i}");
+				  var btnText = document.getElementById("myBtn${i}");
 
-				  if (dots`+i+`.style.display === "none") {
+				  if (dots.style.display === "none") {
 				    dots.style.display = "inline";
 				    btnText.innerHTML = "Read more"; 
 				    moreText.style.display = "none";
