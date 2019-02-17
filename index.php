@@ -94,7 +94,7 @@
 				html += '<button onclick="readMore()" id="myBtn'+i+'">Read more</button>';
 				html += '<style>#more'+i+' {display: none;}</style>';
 				html += `<script>
-				function myFunction() {
+				function readMore() {
 				  var dots = document.getElementById("dots${i}");
 				  var moreText = document.getElementById("more${i}");
 				  var btnText = document.getElementById("myBtn${i}");
