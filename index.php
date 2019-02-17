@@ -97,16 +97,16 @@
                                 <p>Drag the slider to indicate overall rating of the bathroom</p>
 
                                 <div class="slidecontainer">
-                                    <input type="range" name="overall_rating" min="1" max="10" value="10" class="slider" id="myRange">
-                                    <p>Value: <span id="demo"></span></p>
+                                    <input type="range" name="overall_rating" min="1" max="10" value="10" class="slider" id="myRange0">
+                                    <p>Value: <span id="demo0"></span></p>
                                 </div>
 
                                 <script>
                                     var window.userLon;
                                     var window.userLat;
-                                    var slider = document.getElementById("myRange");
-                                    var output = document.getElementById("demo");
-                                    output.innerHTML = "🚽🚽🚽🚽🚽🚽🚽🚽🚽🚽 10";
+                                    var slider0 = document.getElementById("myRange0");
+                                    var output0 = document.getElementById("demo0");
+                                    output0.innerHTML = "🚽🚽🚽🚽🚽🚽🚽🚽🚽🚽 10";
 
                                     function toilets(number) {
                                         var string = "";
@@ -115,8 +115,8 @@
                                         return string;
                                     }
 
-                                    slider.oninput = function() {
-                                        output.innerHTML = toilets(this.value);
+                                    slider0.oninput = function() {
+                                        output0.innerHTML = toilets(this.value);
                                     }
                                 </script>
                                 <br>
