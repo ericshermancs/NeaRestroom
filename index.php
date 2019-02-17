@@ -37,6 +37,27 @@
 <!--<script src="project_functions.js" type="text/javascript"></script>-->
 
 <script>
+	function degreesToRadians(degrees) {
+	  return degrees * Math.PI / 180;
+	}
+
+	function distanceInYdBetweenEarthCoordinates(lat1, lon1, lat2, lon2) {
+	  var earthRadiusKm = 6371;
+
+	  var dLat = degreesToRadians(lat2-lat1);
+	  var dLon = degreesToRadians(lon2-lon1);
+
+	  lat1 = degreesToRadians(lat1);
+	  lat2 = degreesToRadians(lat2);
+
+	  var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+	          Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2); 
+	  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+	  var fakeDistance = earthRadiusKm * c;
+	  var realDistance = 1093.61 * fakeDistance;
+	  return realDistance;
+	}
+
 	function getRoute(position){
 		var userLat = position.coords.latitude;
 		var userLon = position.coords.longitude;
@@ -54,13 +75,25 @@
 		var poopEmoji = L.icon({
 			iconUrl: 'images/poop_emoji.png', 
 			iconSize: [28, 34],
-			iconAnchor: [64, 122],
+			iconAnchor: [28, 35],
 			popupAnchor: [-3, -76]
 		});
 
 		var i;
 		for(i = 0; i < j.length; i++){
-			L.marker([j[i].latitude,j[i].longitude], {icon: poopEmoji}).addTo(mymap);
+			let mark = L.marker([j[i].latitude,j[i].longitude], {icon: poopEmoji});
+			let rl = j[i].reviews.length;
+			let html = "Average Rating: "+j[i].overall_rating;
+			html += "<br> Cleanliness Rating: "+ j[i].cleanliness_level;
+			html += "<br> Gender: "+j[i].gender +". Distance: " + 
+			Math.floor(distanceInYdBetweenEarthCoordinates(j[i].latitude, j[i].longitude, userLat, userLon))+" Yds";
+			html += "<br> "+ j[i].reviews[rl-1].comment.substring(0,50);
+			if(j[i].reviews[rl-1].comment.length > 50){
+				html += '...';
+			}
+			html +="<br> <button>Rate this bathroom</button>";
+			mark.bindPopup(html);
+			mark.addTo(mymap);
 		}
 		console.log(j);
 		console.log(j[1].latitude, j[1].longitude)

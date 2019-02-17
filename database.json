@@ -4,8 +4,8 @@
     "latitude": 38.98283507862747,
     "longitude": -76.94862845252683,
     "name": "Hillel 1st Floor",
-    "cleanliness_level": 3,
-    "ovearall_rating": 4,
+    "cleanliness_level": 6,
+    "overall_rating": 7,
     "gender": "male",
     "categories": [
       "handicapped",
@@ -16,8 +16,8 @@
     ],
     "reviews": [
       {
-        "cleanliness_level": 3,
-        "overall_rating": 4,
+        "cleanliness_level": 6,
+        "overall_rating": 7,
         "comment": "What a horrible bathroom! It had no bathroom attendant, and I had to wipe myself! There is a gap in the door the size of my mothers behind, and the toiletpaper is only 1 ply! Disgustinging"
       }
     ]
@@ -28,8 +28,8 @@
     "longitude": -76.9479067821948,
     "name": "Women's handicapped across street",
     "gender": "female",
-    "cleanliness_level": 5,
-    "ovearall_rating": 5,
+    "cleanliness_level": 10,
+    "overall_rating": 10,
     "categories": [
       "handicapped",
       "soap",
@@ -39,8 +39,8 @@
     ],
     "reviews": [
       {
-        "cleanliness_level": 5,
-        "overall_rating": 5,
+        "cleanliness_level": 10,
+        "overall_rating": 10,
         "comment": "Could not get inside building. I am a man and not a student here :("
       }
     ]
