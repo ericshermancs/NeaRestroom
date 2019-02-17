@@ -61,7 +61,7 @@
 		}).addTo(mymap);
 	}
 
-	navigator.geolocation.getCurrentPosition(success)
+	navigator.geolocation.getCurrentPosition(getRoute);
 	
 
 </script>
