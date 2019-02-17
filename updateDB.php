@@ -35,7 +35,7 @@
         }
         $categories = array($_POST['gender']);
         $categories = array_merge($categories, $_POST['dry'], $_POST['baby']);
-
+        return;
         $br = array(
             'name' => $_POST['name'],
             'cleanliness_level' => $_POST['cleanliness_level'],
