@@ -17,6 +17,7 @@
     <span class="close">&times;</span>
     <p>
 
+<form action="updateDB.php" method="POST">
 <style>
 .slidecontainer {
   width: 100%;
@@ -239,18 +240,18 @@ slider2.oninput = function() {
 <br>
 		<h1>Diaper-Change</h1>
 		Is there a diaper-changing/breastfeeding area?
-		<form>
+		
 			<input type="radio" name="Availability" value="diaper-changing"> Diaper-Changing<br>
 			<input type="radio" name="Availability" value="breastfeeding"> Breastfeeding<br>
 			<input type="radio" name="Availability" value="both"> Both<br>
 			<input type="radio" name="Availability" value="neither"> Neither<br>
 
-		</form>
+		
 		<br>
 
 		<h1>Number of Sinks</h1>
 		How many sinks are there?<br>
-		<form>
+
 			  Number:<br>
 			<input type="radio" name="number" value="0"> 0 
 		  	<input type="radio" name="number" value="1"> 1 
@@ -260,27 +261,28 @@ slider2.oninput = function() {
 		  	<input type="radio" name="number" value="5"> 5 
 		  	<input type="radio" name="number" value="5+"> 5+
 		  	<br>
-		</form>
+		
 
 		<h1>Handicap Services</h1>
 		Are there accomodations for people with disabilities?<br>
-		<form>
+		
 			<input type="radio" name="Yes or No" value="yes"> Yes<br>
 			<input type="radio" name="Yes or No" value="no"> No<br>
-		</form>
+		
 
 		<h1>Hand-Drying Options</h1>
 		What hand drying options are there?<br>
-		<form>
+		
 			<input type="radio" name="options" value="blowdryer"> Blowdryer<br>
 			<input type="radio" name="options" value="paper towel">Paper Towel<br>
 			<input type="radio" name="options" value="both"> Both<br>
-		</form>
+		
 
 		<br><br>
 
-		<button type="button">Submit</button>
-		<form action="/action_page.php" target="_blank">
+		<input type="hidden" name="action" value="add">
+		<input type="submit" name="submit">
+	</form>
 
     </p>
   </div>
