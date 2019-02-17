@@ -641,13 +641,15 @@
             }
             console.log(j);
             console.log(j[1].latitude, j[1].longitude)
-            L.Routing.control({
+            var c = L.Routing.control({
                 waypoints: [
                     L.latLng(window.userLat, window.userLon),
                     L.latLng(j[closest_index].latitude, j[closest_index].longitude)
                 ],
-                show: false
-            }).addTo(mymap);
+                
+            });
+            c.hide();
+            c.addTo(mymap);
         }
         /*
         try{
