@@ -11,7 +11,7 @@
                 break; 
             }
         }
-        echo $index."<br>";
+        //echo $index."<br>";
         for($i = 0; $i < sizeof($json[$index]['reviews']); $i++){
             $review = $json[$index]['reviews'][$i];
             //print_r($review);
@@ -20,7 +20,7 @@
         }
     }
     if (isset($_GET['unique_id'])){
-        echo $_GET['unique_id'];
+        //echo $_GET['unique_id'];
         find_review($_GET['unique_id']);
     }
 ?>
