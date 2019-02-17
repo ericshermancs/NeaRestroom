@@ -103,8 +103,8 @@
 	                                var window.userLon;
 	                                var window.userLat;
 	                            }
-	                            catch(...){
-	                            	
+	                            catch(err){
+
 	                            }
                                 var slider0 = document.getElementById("myRange0");
                                 var output0 = document.getElementById("demo0");
