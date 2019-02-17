@@ -52,8 +52,8 @@
             'longitude' => $_POST['longitude'],
             'unique_id' => $time,
             'categories' => $categories,
-            'reviews' => array('overall_rating' => $_POST['overall_rating']
-                               'cleanliness_level' => $_POST['cleanliness_level']
+            'reviews' => array('overall_rating' => $_POST['overall_rating'],
+                               'cleanliness_level' => $_POST['cleanliness_level'],
                                 'comment' => $_POST['comment'])
         );
         print_r($br);
