@@ -334,7 +334,7 @@ Which genders have restroom access here?
   position: fixed;
   display: inline-block;
   top: 0;
-  z-index: 1000;
+  z-index: 10000;
 
 }
 
@@ -346,7 +346,7 @@ Which genders have restroom access here?
   background-color: #f1f1f1;
   min-width: 160px;
   top: 0;
-  z-index: 1000;
+  z-index: 10000;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   
 }
