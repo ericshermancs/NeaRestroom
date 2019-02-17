@@ -643,13 +643,15 @@
                 ]
             }).addTo(mymap);
         }
+        /*
         try{
 	        var window.userLon;
 	        var window.userLat;
 	    }
 	    catch(err){
-	    	
+
 	    }
+	    */
         navigator.geolocation.getCurrentPosition(getRoute);
     </script>
 
