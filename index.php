@@ -501,6 +501,7 @@
             function showRateMenu(unique_id) {
                 var modal = document.getElementById("myModal2");
                 modal.style.display = 'block';
+                modal.style.zIndex=10000;
                 document.getElementById('unique_id_editform').value = unique_id;
             }
             /* When the user clicks on the button, 
@@ -544,6 +545,7 @@
             // When the user clicks on the button, open the modal 
             btn.onclick = function() {
                 modal.style.display = "block";
+                modal.style.zIndex=10000;
                 myFunction();
             }
 
