@@ -51,6 +51,7 @@
             'unique_id' => $time,
             'categories' => $categories
         );
+        print_r($br);
         $str = file_get_contents('database.json');
         $json = json_decode($str, true);
         array_push($json, $br);
