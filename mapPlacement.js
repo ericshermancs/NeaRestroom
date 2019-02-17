@@ -10,7 +10,7 @@ function mapPlacement() {
 }
 mapPlacement();
 
-function addBathroom (name, cleanliness, rating, sinks, dry, gender) {
+function addBathroom (name, cleanliness, rating, sinks, dry, gender, latitude, longitude) {
 	br = {
 		'categories': ['handicap', 'top_stall_gap', 'bottom_stall_gap', 'breastfeeding', 'diaper_change']
 			'name': name,
@@ -19,6 +19,8 @@ function addBathroom (name, cleanliness, rating, sinks, dry, gender) {
 			'sinks': sinks,
 			'method_of_drying': dry,
 			'gender': gender,
-			'reviews': [];
+			'reviews': [],
+			'latitude': latitude,
+			'longitude': longitude;
 	}
 }
