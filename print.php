@@ -15,6 +15,7 @@
         for($i = 0; $i < sizeof($json[$index]['reviews']); $i++){
             $review = $json[$index][$i];
             print_r($review);
+            echo $i;
             echo $review['overall_rating'].'<br>'.$review['cleanliness_level'].'<br>'.$review['comment'].'<br><br>';
         }
     }
