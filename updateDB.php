@@ -49,7 +49,8 @@
             'latitude' => $_POST['latitude'],
             'longitude' => $_POST['longitude'],
             'unique_id' => $time,
-            'categories' => $categories
+            'categories' => $categories,
+            'reviews' => array();
         );
         print_r($br);
         $str = file_get_contents('database.json');
