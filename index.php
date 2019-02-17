@@ -442,7 +442,7 @@
         </style>
         <script>
         	function showRateMenu(unique_id){
-        		var modal = document.getElementById("modal2");
+        		var modal = document.getElementById("myModal2");
         		modal.style.display = 'block';
         	}
             /* When the user clicks on the button, 
