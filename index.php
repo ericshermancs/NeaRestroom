@@ -99,16 +99,7 @@
                             </div>
 
                             <script>
-                            	function coord(){
-	                            	try{
-		                                var window.userLon;
-		                                var window.userLat;
-		                            }
-		                            catch(err){
 
-		                            }
-		                        }
-		                        coord();
                                 var slider0 = document.getElementById("myRange0");
                                 var output0 = document.getElementById("demo0");
                                 output0.innerHTML = "🚽🚽🚽🚽🚽🚽🚽🚽🚽🚽 10";
@@ -191,6 +182,8 @@
                                     slider2.oninput = function() {
                                         output2.innerHTML = toilets(this.value);
                                     }
+                                    var window.userLon;
+		                                var window.userLat;
                                 </script>
 
                                 <style>
