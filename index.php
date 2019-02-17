@@ -32,9 +32,7 @@
 </head>
 <body>
 
-
-<div id='map'>
-	<div class="dropdown">
+<div class="dropdown">
   <button onclick="myFunction()" class="dropbtn">≡</button>
   <div id="myDropdown" class="dropdown-content">
     <a id="myBtn" style="font-family: Arial Black, Gadget, sans-serif; size: 20pt">Add New Bathroom</a>
@@ -336,6 +334,7 @@ Which genders have restroom access here?
   position: fixed;
   display: inline-block;
   top: 0;
+  z-index: 1000;
 
 }
 
@@ -347,7 +346,7 @@ Which genders have restroom access here?
   background-color: #f1f1f1;
   min-width: 160px;
   top: 0;
-  z-index: 10;
+  z-index: 1000;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   
 }
@@ -461,7 +460,7 @@ window.onclick = function(event) {
   </script>
 </div>
 
-</div>
+<div id='map'></div>
 
 <!--<script src="project_functions.js" type="text/javascript"></script>-->
 
