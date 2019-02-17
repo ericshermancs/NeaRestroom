@@ -36,9 +36,9 @@
 <body>
 
     <div class="dropdown">
-        <button onclick="myFunction()" id="myBtn" class="dropbtn">Add New Bathroom</button>
+        <button onclick="myFunction()" class="dropbtn">≡</button>
         <div id="myDropdown" class="dropdown-content">
-            <!--<a id="myBtn" style="font-family: Arial Black, Gadget, sans-serif; size: 20pt">Add New Bathroom</a>-->
+            <a id="myBtn" style="font-family: Arial Black, Gadget, sans-serif; size: 20pt">Add New Bathroom</a>
 
             <!-- The Modal -->
             <div id="myModal" class="modal">
