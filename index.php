@@ -83,7 +83,7 @@
 		for(i = 0; i < j.length; i++){
 			let mark = L.marker([j[i].latitude,j[i].longitude], {icon: poopEmoji});
 			let rl = j[i].reviews.length;
-			let html = "Average Rating: "+j[i].average_rating;
+			let html = "Average Rating: "+j[i].overall_rating;
 			html += "<br> Cleanliness Rating: "+ j[i].cleanliness_level;
 			html += "<br> Gender: "+j[i].gender +". Distance: " + 
 			Math.floor(distanceInYdBetweenEarthCoordinates(j[i].latitude, j[i].longitude, userLat, userLon))+" Yds";
