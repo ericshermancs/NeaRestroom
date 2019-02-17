@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
 
 
 	<style>
@@ -49,6 +50,12 @@
 	var j = <?php echo readDB();?>
 	
 	console.log(j);
+	L.Routing.control({
+	  waypoints: [
+	    L.latLng(38.983270399999995, -76.9466368),
+	    L.latLng(j[0].latitude, j[0].longitude)
+	  ]
+	}).addTo(map);
 </script>
 
 
