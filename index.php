@@ -91,7 +91,7 @@
 			if(j[i].reviews[rl-1].comment.length > 50){
 				html += '<span id="dots'+i+'">...</span><span id="more'+i+'">' + 
 				j[i].reviews[rl-1].comment.substring(50,j[i].reviews[rl-1].comment.length) + '</span>';
-				html += '<button onclick="readMore()" id="myBtn'+i+'">Read more</button>';
+				
 				html += '<style>#more'+i+' {display: none;}</style>';
 				html += `<script>
 				function readMore() {
@@ -111,6 +111,7 @@
 				}
 				<\/script>
 				`;
+				html += '<button onclick="readMore()" id="myBtn'+i+'">Read more</button>';
 			}
 			mark.bindPopup(html);
 			mark.addTo(mymap);
