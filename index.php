@@ -333,7 +333,10 @@
 
         </div>
         <div id="myModal2" class="modal">
-        	
+        	  <div class="modal-content">
+			    <span class="close" onclick="(function(){document.getElementById('myModal2').style.display='none'})();">&times;</span>
+			    <p>Some text in the Modal..</p>
+			  </div>
         </div>
         <style>
             /* Dropdown Button */
