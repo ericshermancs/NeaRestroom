@@ -22,29 +22,41 @@
         if(!isset($_POST['baby'])){
             $_POST['baby'] = array();
         }
+        elseif(!is_array($_POST['baby'])){
+            $_POST['baby'] = array($_POST['baby']);
+        }
+
         if(!isset($_POST['dry'])){
             $_POST['dry'] = array();
         }
+        elseif(!is_array($_POST['dry'])){
+            $_POST['dry'] = array($_POST['dry']);
+        }
+        
         $categories = array($_POST['gender']);
-        $categories = array_merge($categories, $_POST['dry'], $_POST['baby']);
+        if($_POST['handicap']=='yes'){
+            array_push($categories,'handicap');
+        }
 
+        $categories = array_merge($categories, $_POST['dry'], $_POST['baby']);
+        
         $br = array(
             'name' => $_POST['name'],
             'cleanliness_level' => $_POST['cleanliness_level'],
             'overall_rating' => $_POST['overall_rating'],
             'sinks' => $_POST['sinks'],
-            'dry' => $_POST['dry'],
             'gender' => $_POST['gender'],
             'latitude' => $_POST['latitude'],
             'longitude' => $_POST['longitude'],
             'unique_id' => $time,
-            'categories' => $categories;
+            'categories' => $categories
         );
         $str = file_get_contents('database.json');
         $json = json_decode($str, true);
         array_push($json, $br);
         $db_str = json_encode($json);
         file_put_contents('database.json', $db_str);
+        
     }
 
     function readDB(){
