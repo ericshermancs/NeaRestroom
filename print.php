@@ -16,6 +16,7 @@
         }
     }
     if (isset($_GET['unique_id'])){
+        echo $_GET['unique_id'];
         find_review($_GET['unique_id']);
     }
 ?>
