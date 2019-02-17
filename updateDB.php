@@ -32,13 +32,14 @@
         elseif(!is_array($_POST['dry'])){
             $_POST['dry'] = array($_POST['dry']);
         }
-        /*
+        
         $categories = array($_POST['gender']);
         if($_POST['handicap']=='yes'){
             array_push($categories,'handicap');
         }
+        /*
         $categories = array_merge($categories, $_POST['dry'], $_POST['baby']);
-        return;
+        
         $br = array(
             'name' => $_POST['name'],
             'cleanliness_level' => $_POST['cleanliness_level'],
