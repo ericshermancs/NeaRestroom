@@ -2,7 +2,7 @@
     function find_review($unique_id){
         $database = file_get_contents('database.json');
         $json = json_decode($database, true);
-        print_r($json);
+        //print_r($json);
         $index; 
         for($i = 0; $i < sizeof($json); $i++){
             echo $index."<br>";
@@ -14,6 +14,7 @@
         echo $index."<br>";
         for($i = 0; $i < sizeof($json[$index]['reviews']); $i++){
             $review = $json[$index][$i];
+            print_r($review);
             echo $review['overall_rating'].'<br>'.$review['cleanliness_level'].'<br>'.$review['comment'].'<br><br>';
         }
     }
