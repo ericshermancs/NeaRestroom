@@ -42,7 +42,7 @@
     }
 
     function readDB(){
-        echo file_get_contents('database.json');
+        return file_get_contents('database.json');
     }
 
     if($_POST['action']=='update'){

@@ -1,15 +1,1 @@
-[
-    {
-        "unique_id" : 613770,
-        "latitude" : 38.982797399999995,
-        "longitude" : -76.94868029999999,
-        "name" : "Hillel 1st Floor",
-        "cleanliness_level" : 3,
-        "ovearall_rating" : 4,
-        "reviews" : [{
-            "cleanliness_level" : 3,
-            "overall_rating" : 4,
-            "comment" : "What a horrible bathroom! It had no bathroom attendant, and I had to wipe myself! There is a gap in the door the size of my mothers behind, and the toiletpaper is only 1 ply! Disgustinging"
-        }]
-    }
-]
+[{"unique_id":613770,"latitude":38.982797399999995,"longitude":-76.948680299999992,"name":"Hillel 1st Floor","cleanliness_level":3,"ovearall_rating":4,"reviews":[{"cleanliness_level":3,"overall_rating":4,"comment":"What a horrible bathroom! It had no bathroom attendant, and I had to wipe myself! There is a gap in the door the size of my mothers behind, and the toiletpaper is only 1 ply! Disgustinging"}]}]
