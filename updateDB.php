@@ -3,10 +3,10 @@
         $str = file_get_contents('database.json');
         $json = json_decode($str, true);
         $unique_id = $_POST['unique_id'];
-        $restroom; 
+        $restroom_index; 
         for ($i = 0; $i < sizeof($json); $i++){
             if($json[$i]['unique_id'] == $unique_id){
-                $restroom = $json[$i];
+                $restroom_index = $i;
                 break; 
             }
         }
@@ -18,13 +18,13 @@
         $review = array('cleanliness_level' => $cleanliness_level,
                         'overall_rating' => $overall_rating,
                         'comment' => $comment);
-        array_push($restroom['reviews'], $review);
-        /*print_r($restroom);
+        array_push($json[$restroom_index]['reviews'], $review);
+        print_r($json[$restroom_index]);
         echo "<br>";
         print_r($review);
         echo "<br>";
         print_r($json);
-        */
+        
         $db_str = json_encode($json);
         file_put_contents('database.json', $db_str);
         //header('Location: index.php');
