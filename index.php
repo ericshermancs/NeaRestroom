@@ -339,12 +339,12 @@
 			    	<input type="range" name="cleanliness_level" min="1" max="10" value="10" class="slider" id="myRange3">
 			    	<div class="slidecontainer">
 			    		<input type="range" name="overall_rating" min="1" max="10" value="10" class="slider" id="myRange4">
-			    		<p>Value: <span id="demo2"></span></p>
+			    		<p>Value: <span id="demo4"></span></p>
 			    	</div>
                     <script>
-                        var slider3 = document.getElementById("myRange2");
-                        var output3 = document.getElementById("demo2");
-                        output3.innerHTML = "🚽🚽🚽🚽🚽🚽🚽🚽🚽🚽 10";
+                        var slider4 = document.getElementById("myRange4");
+                        var output4 = document.getElementById("demo4");
+                        output4.innerHTML = "🚽🚽🚽🚽🚽🚽🚽🚽🚽🚽 10";
 
                         function toilets(number) {
                             var string = "";
@@ -353,8 +353,8 @@
                             return string;
                         }
 
-                        slider3.oninput = function() {
-                            output3.innerHTML = toilets(this.value);
+                        slider4.oninput = function() {
+                            output4.innerHTML = toilets(this.value);
                         }
                     </script>
 			    	 <h1>Comment</h1>
