@@ -52,10 +52,11 @@
 	console.log(j);
 	L.Routing.control({
 	  waypoints: [
-	    L.latLng(38.983270399999995, -76.9466368),
+	    L.latLng(30.983270399999995, -76.9466368),
 	    L.latLng(j[0].latitude, j[0].longitude)
 	  ]
 	}).addTo(map);
+
 </script>
 
 
