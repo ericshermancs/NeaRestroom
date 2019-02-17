@@ -18,16 +18,20 @@
         $review = array('cleanliness_level' => $cleanliness_level,
                         'overall_rating' => $overall_rating,
                         'comment' => $comment);
+        $aggregate_overall = $json[$restroom_index]['overall_rating'] * sizeof($json[$restroom_index]['reviews']);
+        $aggregate_overall += $overall_rating;
+        $aggregate_cleanliness = $json[$restroom_index]['cleanliness_level'] * sizeof($json[$restroom_index]['reviews']);
+        $aggregate_cleanliness += $cleanliness_level;
         array_push($json[$restroom_index]['reviews'], $review);
-        print_r($json[$restroom_index]);
-        echo "<br>";
-        print_r($review);
-        echo "<br>";
-        print_r($json);
-        
+        $average_overall = $aggregate_overall / sizeof($json[$restroom_index]['reviews']);
+        $average_cleanliness = $aggregate_cleanliness / sizeof($json[$restroom_index]['reviews']);
+        $json[$restroom_index]['overall_rating'] = $average_overall;
+        $json[$restroom_index]['cleanliness_level'] = $average_cleanliness;
+
+
         $db_str = json_encode($json);
         file_put_contents('database.json', $db_str);
-        //header('Location: index.php');
+        header('Location: index.php');
     }
 
     function addRestroom (){
