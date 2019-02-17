@@ -35,7 +35,7 @@
     }
 
     function addRestroom (){
-        if(!is_numeric($_POST['latitude']) or !is_numeric($_POST['longitude'])){
+        if(!isset($_POST['latitude']) or !isset($_POST['longitude'])){
             header('Location: index.php');
         }
         //$name, $cleanliness_level, $rating, $sinks, $dry, $gender, $latitude, $longitude, $unique_id, $categories;
