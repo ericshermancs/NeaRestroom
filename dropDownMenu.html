@@ -17,7 +17,7 @@
     <span class="close">&times;</span>
     <p>
 
-<form action="updateDB.php" method="POST">
+<form action="updateDB.php" method="POST" id="form">
 	<h1>Bathroom Name</h1>
 	What is the name of the bathroom? Include Location<br>
 	<input type="text" name="name"><br>
@@ -222,8 +222,9 @@ slider2.oninput = function() {
 </style>
 <body>
 
-<h1>Gender Accesss</h1>
-Which genders have restroom access here? Check all that apply.
+<h1>Gender Access</h1>
+Which genders have restroom access here?
+  <br>
 	<input type="radio" name="gender" value="men">Men<br>
 	<input type="radio" name="gender" value="women">Women<br>
 	<input type="radio" name="gender" value="gender_neutral">Gender-Neutral<br>
@@ -232,13 +233,10 @@ Which genders have restroom access here? Check all that apply.
 <br>
 		<h1>Diaper-Change/Breastfeeding</h1>
 		Is there a diaper-changing/breastfeeding area?
+    <br>
 		
-			<input type="radio" name="baby" value="diaper_changing">Diaper-Changing<br>
-			<input type="radio" name="baby" value="breastfeeding">Breastfeeding<br>
-			<input type="radio" name="baby" value="both">Both<br>
-			<input type="radio" name="baby" value="neither">Neither<br>
-
-		
+			<input type="checkbox" name="baby" value="diaper_changing">Diaper-Changing<br>
+			<input type="checkbox" name="baby" value="breastfeeding">Breastfeeding<br>
 		<br>
 
 		<h1>Number of Sinks</h1>
@@ -264,14 +262,14 @@ Which genders have restroom access here? Check all that apply.
 		<h1>Hand-Drying Options</h1>
 		What hand drying options are there?<br>
 		
-			<input type="radio" name="dry" value="blowdryer"> Blowdryer<br>
-			<input type="radio" name="dry" value="paper_towel">Paper Towel<br>
-			<input type="radio" name="dry" value="both"> Both<br>
-		
+			<input type="checkbox" name="dry" value="blowdryer"> Blowdryer<br>
+			<input type="checkbox" name="dry" value="paper_towel">Paper Towel<br>
 
 		<br><br>
 
 		<input type="hidden" name="action" value="add">
+    <input type="hidden" name="latitude" id="latitude">
+    <input type="hidden" name="longitude" id="longitude">
 		<input type="submit" name="submit">
 	</form>
 
@@ -371,6 +369,8 @@ function doStuff() {
   document.getElementById("myDropdown").classList.toggle("show");
   var userLat = position.coords.latitude;
   var userLon = position.coords.longitude;
+  document.getElementById('latitude').value = userLat;
+  document.getElementById('longitude').value = userLon;
 }
 function myFunction(){
   navigator.geolocation.getCurrentPosition(doStuff);
