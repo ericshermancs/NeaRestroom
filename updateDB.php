@@ -37,6 +37,9 @@
     function addRestroom (){
         //$name, $cleanliness_level, $rating, $sinks, $dry, $gender, $latitude, $longitude, $unique_id, $categories;
         $time = microtime();
+        $pattern = '/\s+/';
+        $replacement = '';
+        $time = preg_replace($pattern, $replacement, $time);
         if(!isset($_POST['baby'])){
             $_POST['baby'] = array();
         }
