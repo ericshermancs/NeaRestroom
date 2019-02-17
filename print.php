@@ -19,7 +19,7 @@
             //echo $i;
             
             
-            echo $review['overall_rating'].'<br>'.$review['cleanliness_level'].'<br>'.$review['comment'].'<br><br>';
+            echo "Overall Experience ".$review['overall_rating'].'<br>Cleanliness: '.$review['cleanliness_level'].'<br> Comment: '.$review['comment'].'<br><br>';
         }
         echo "</div>";
     }
