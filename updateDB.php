@@ -22,7 +22,8 @@
         if(!isset($_POST['baby'])){
             $_POST['baby'] = array();
         }
-        
+        echo 'HAI';
+        return;
         elseif(!is_array($_POST['baby'])){
             $_POST['baby'] = array($_POST['baby']);
         }
