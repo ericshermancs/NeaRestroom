@@ -2,7 +2,7 @@
 <html>
 
 <head>
-
+	
     <title>NeaRestroom</title>
 
     <meta charset="utf-8" />
@@ -182,8 +182,7 @@
                                     slider2.oninput = function() {
                                         output2.innerHTML = toilets(this.value);
                                     }
-                                    var window.userLon;
-		                                var window.userLat;
+                                    
                                 </script>
 
                                 <style>
@@ -644,7 +643,8 @@
                 ]
             }).addTo(mymap);
         }
-
+        var window.userLon;
+        var window.userLat;
         navigator.geolocation.getCurrentPosition(getRoute);
     </script>
 
