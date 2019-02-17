@@ -42,6 +42,7 @@
     }
 
     function readDB(){
+        echo "hi";
         return file_get_contents('database.json');
     }
 
