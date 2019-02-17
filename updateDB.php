@@ -42,15 +42,16 @@
     }
 
     function readDB(){
-        //return "hi";
         return file_get_contents('database.json');
     }
+    if(isset($_POST['action'])){
+        if($_POST['action']=='update'){
+            updateRestroom();
+        }
+        elseif($_POST['action']=='add'){
+            addRestroom();
+        } 
+    }
 
-    if($_POST['action']=='update'){
-        updateRestroom();
-    }
-    elseif($_POST['action']=='add'){
-        addRestroom();
-    }
     
 ?>
