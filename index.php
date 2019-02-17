@@ -337,7 +337,28 @@
 			    <span class="close" onclick="(function(){document.getElementById('myModal2').style.display='none'})();">&times;</span>
 			    <form action="updateDB.php" method="POST">
 			    	<input type="range" name="cleanliness_level" min="1" max="10" value="10" class="slider" id="myRange3">
-			    	<input type="range" name="overall_rating" min="1" max="10" value="10" class="slider" id="myRange4">
+			    	<div class="slidecontainer">
+			    		<input type="range" name="overall_rating" min="1" max="10" value="10" class="slider" id="myRange4">
+			    		<p>Value: <span id="demo2"></span></p>
+			    	</div>
+                    <script>
+                        var slider3 = document.getElementById("myRange2");
+                        var output3 = document.getElementById("demo2");
+                        output3.innerHTML = "🚽🚽🚽🚽🚽🚽🚽🚽🚽🚽 10";
+
+                        function toilets(number) {
+                            var string = "";
+                            for (var i = 1; i <= number; i++) string += "🚽";
+                            string += (" " + number);
+                            return string;
+                        }
+
+                        slider3.oninput = function() {
+                            output3.innerHTML = toilets(this.value);
+                        }
+                    </script>
+			    	 <h1>Comment</h1>
+                    <p>Do you have anything further to say? Any comments that express something about the bathroom that isn't clearly stated in the previous fields?</p>
 			    	<input type="text" name="comment">
 			    	<input type="submit" name="submit">
 			    </form>
