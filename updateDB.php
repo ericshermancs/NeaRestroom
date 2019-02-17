@@ -19,20 +19,26 @@
     function addRestroom (){
         //$name, $cleanliness_level, $rating, $sinks, $dry, $gender, $latitude, $longitude, $unique_id, $categories;
         $time = microtime();
-        if(!isset($_POST['categories'])){
-            $_POST['categories'] = array();
+        if(!isset($_POST['baby'])){
+            $_POST['baby'] = array();
         }
+        if(!isset($_POST['dry'])){
+            $_POST['dry'] = array();
+        }
+        $categories = array($_POST['gender']);
+        $categories = array_merge($categories, $_POST['dry'], $_POST['baby']);
+
         $br = array(
             'name' => $_POST['name'],
             'cleanliness_level' => $_POST['cleanliness_level'],
-            'rating' => $_POST['rating'],
+            'overall_rating' => $_POST['overall_rating'],
             'sinks' => $_POST['sinks'],
             'dry' => $_POST['dry'],
             'gender' => $_POST['gender'],
             'latitude' => $_POST['latitude'],
             'longitude' => $_POST['longitude'],
             'unique_id' => $time,
-            'categories' => $categories
+            'categories' => $categories;
         );
         $str = file_get_contents('database.json');
         $json = json_decode($str, true);
