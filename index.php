@@ -109,7 +109,7 @@
 				    moreText.style.display = "inline";
 				  }
 				}
-				</script>
+				<\/script>
 				`;
 			}
 			mark.bindPopup(html);
