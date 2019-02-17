@@ -639,7 +639,7 @@
                 }
                 */
                 html += "<br> <button onclick=showRateMenu(" + j[i].unique_id + ")>Rate this bathroom</button>"+
-                "<button onclick=showReviews("+ j[i].unique_id +")></button>";
+                "<button onclick=showReviews("+ j[i].unique_id +")>See all reviews</button>";
                 mark.bindPopup(html);
                 mark.addTo(mymap);
                 if (shortest_distance < 0) {
