@@ -18,6 +18,9 @@
     <p>
 
 <form action="updateDB.php" method="POST">
+	<h1>Bathroom Name</h1>
+	What is the name of the bathroom? Include Location<br>
+	<input type="text" name="name"><br>
 <style>
 .slidecontainer {
   width: 100%;
@@ -220,31 +223,20 @@ slider2.oninput = function() {
 <body>
 
 <h1>Gender Accesss</h1>
-<p>Which genders have restroom access here? Check all that apply.</p>
-<label class="container">Male
-  <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Female
-  <input type="checkbox">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Gender Neutral
-  <input type="checkbox">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Unisex
-  <input type="checkbox">
-  <span class="checkmark"></span>
-</label>
+Which genders have restroom access here? Check all that apply.
+	<input type="radio" name="Availability" value="Men">Men<br>
+	<input type="radio" name="Availability" value="Women">Women<br>
+	<input type="radio" name="Availability" value="Gender-Neutral">Gender-Neutral<br>
+
+
 <br>
 		<h1>Diaper-Change</h1>
 		Is there a diaper-changing/breastfeeding area?
 		
-			<input type="radio" name="Availability" value="diaper-changing"> Diaper-Changing<br>
-			<input type="radio" name="Availability" value="breastfeeding"> Breastfeeding<br>
-			<input type="radio" name="Availability" value="both"> Both<br>
-			<input type="radio" name="Availability" value="neither"> Neither<br>
+			<input type="radio" name="Availability" value="diaper-changing">Diaper-Changing<br>
+			<input type="radio" name="Availability" value="breastfeeding">Breastfeeding<br>
+			<input type="radio" name="Availability" value="both">Both<br>
+			<input type="radio" name="Availability" value="neither">Neither<br>
 
 		
 		<br>
