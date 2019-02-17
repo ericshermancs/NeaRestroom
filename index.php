@@ -50,7 +50,17 @@
 			}).addTo(mymap);
 
 		var j = <?php echo readDB();?>
-		
+		var poopEmoji = L.icon({
+			iconUrl: 'poop_emoji.png', 
+			iconSize: [28, 34],
+			iconAnchor: [64, 122],
+			popupAnchor: [-3, -76]
+		});
+
+		var i;
+		for(i = 0; i < j.length; i++){
+			L.marker([j[i].latitude,j[i].longitude], {icon: poopEmoji}).addTo(mymap);
+		}
 		console.log(j);
 		console.log(j[1].latitude, j[1].longitude)
 		L.Routing.control({
