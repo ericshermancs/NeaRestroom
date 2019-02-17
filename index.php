@@ -86,8 +86,11 @@
 			let html = "Average Rating: "+j[i].average_rating;
 			html += "<br> Cleanliness Rating: "+ j[i].cleanliness_level;
 			html += "<br> Gender: "+j[i].gender +". Distance: " + 
-			distanceInYdBetweenEarthCoordinates(j[i].latitude, j[i].longitude, userLat, userLon)+" Yds";
-			html += "<br> "+ j[i].reviews[rl-1].comment.substring(0,50)
+			floor(distanceInYdBetweenEarthCoordinates(j[i].latitude, j[i].longitude, userLat, userLon))+" Yds";
+			html += "<br> "+ j[i].reviews[rl-1].comment.substring(0,50);
+			if(j[i].reviews[rl-1].comment.length > 50){
+				html += '...'
+			}
 			mark.bindPopup(html);
 			mark.addTo(mymap);
 		}
