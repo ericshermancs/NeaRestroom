@@ -22,8 +22,16 @@
         if(!isset($_POST['baby'])){
             $_POST['baby'] = array();
         }
+        }
+        elseif(!is_array($_POST['baby'])){
+            $_POST['baby'] = array($_POST['baby']);
+        }
+        
         if(!isset($_POST['dry'])){
             $_POST['dry'] = array();
+        }
+        elseif(!is_array($_POST['dry'])){
+            $_POST['dry'] = array($_POST['dry']);
         }
         $categories = array($_POST['gender']);
         $categories = array_merge($categories, $_POST['dry'], $_POST['baby']);
