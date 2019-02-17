@@ -529,7 +529,7 @@ window.onclick = function(event) {
 			if(j[i].reviews[rl-1].comment.length > 50){
 				html += '...';
 			}
-			html +="<br> <button id="myBtn">Rate this bathroom</button>
+			html +='<br> <button id="myBtn">Rate this bathroom</button>'
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
