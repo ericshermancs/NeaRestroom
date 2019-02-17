@@ -54,7 +54,7 @@
 		var poopEmoji = L.icon({
 			iconUrl: 'images/poop_emoji.png', 
 			iconSize: [28, 34],
-			iconAnchor: [19, 46],
+			iconAnchor: [19, 40],
 			popupAnchor: [-3, -76]
 		});
 
