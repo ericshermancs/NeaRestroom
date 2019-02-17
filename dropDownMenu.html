@@ -64,7 +64,7 @@
 <p>Drag the slider to indicate overall rating of the bathroom</p>
 
 <div class="slidecontainer">
-  <input type="range" name= "overall_rating" min="1" max="10" value="50" class="slider" id="myRange">
+  <input type="range" name= "overall_rating" min="1" max="10" value="10" class="slider" id="myRange">
   <p>Value: <span id="demo"></span></p>
 </div>
 
@@ -129,7 +129,7 @@ slider.oninput = function() {
 <p>Drag the slider to indicate overall cleanlines level</p>
 
 <div class="slidecontainer">
-  <input type="range" name="cleanliness_level" min="1" max="10" value="50" class="slider" id="myRange1">
+  <input type="range" name="cleanliness_level" min="1" max="10" value="10" class="slider" id="myRange1">
   <p>Value: <span id="demo1"></span></p>
 </div>
 
@@ -264,12 +264,18 @@ Which genders have restroom access here?
 		
 			<input type="checkbox" name="dry" value="blowdryer"> Blowdryer<br>
 			<input type="checkbox" name="dry" value="paper_towel">Paper Towel<br>
+    <br>
 
-		<br><br>
+    <h1>Comment</h1>
+    <p>Do you have anything further to say? Any comments that express something about the bathroom that isn't clearly stated in the previous fields?</p>
+    <input type="text" name='comment'>
+		
 
 		<input type="hidden" name="action" value="add">
     <input type="hidden" name="latitude" id="latitude">
     <input type="hidden" name="longitude" id="longitude">
+    <br>
+    <br>
 		<input type="submit" name="submit">
 	</form>
 
