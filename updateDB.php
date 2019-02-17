@@ -22,13 +22,10 @@
         if(!isset($_POST['baby'])){
             $_POST['baby'] = array();
         }
-        echo 'HAI';
-        /*
-        return;
         elseif(!is_array($_POST['baby'])){
             $_POST['baby'] = array($_POST['baby']);
         }
-
+        /*
         if(!isset($_POST['dry'])){
             $_POST['dry'] = array();
         }
