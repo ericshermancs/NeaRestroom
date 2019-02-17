@@ -108,7 +108,7 @@
                                     var output0 = document.getElementById("demo0");
                                     output0.innerHTML = "🚽🚽🚽🚽🚽🚽🚽🚽🚽🚽 10";
 
-                                    function toilets(number) {
+                                    function toilets0(number) {
                                         var string = "";
                                         for (var i = 1; i <= number; i++) string += "🚽";
                                         string += (" " + number);
@@ -116,7 +116,7 @@
                                     }
 
                                     slider0.oninput = function() {
-                                        output0.innerHTML = toilets(this.value);
+                                        output0.innerHTML = toilets0(this.value);
                                     }
                                 </script>
                                 <br>
