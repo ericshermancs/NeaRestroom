@@ -788,7 +788,7 @@ function doStuff(position) {
   document.getElementById('latitude').value = userLat;
   document.getElementById('longitude').value = userLon;
 }
-function myFunction(){
+function myFunction1(){
   navigator.geolocation.getCurrentPosition(doStuff);
 
 }
@@ -834,7 +834,7 @@ window.onclick = function(event) {
 }
   <\/script>
 </div>`;
-			html +="<br> <button onclick=myFunction()>Rate this bathroom</button>";
+			html +="<br> <button onclick=myFunction1()>Rate this bathroom</button>";
 			mark.bindPopup(html);
 			mark.addTo(mymap);
 			if(shortest_distance < 0){
