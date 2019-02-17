@@ -224,19 +224,19 @@ slider2.oninput = function() {
 
 <h1>Gender Accesss</h1>
 Which genders have restroom access here? Check all that apply.
-	<input type="radio" name="Availability" value="Men">Men<br>
-	<input type="radio" name="Availability" value="Women">Women<br>
-	<input type="radio" name="Availability" value="Gender-Neutral">Gender-Neutral<br>
+	<input type="radio" name="gender" value="men">Men<br>
+	<input type="radio" name="gender" value="women">Women<br>
+	<input type="radio" name="gender" value="gender_neutral">Gender-Neutral<br>
 
 
 <br>
 		<h1>Diaper-Change</h1>
-		Is there a diaper-changing/breastfeeding area?
+		Is there a diaper-changing area?
 		
-			<input type="radio" name="Availability" value="diaper-changing">Diaper-Changing<br>
-			<input type="radio" name="Availability" value="breastfeeding">Breastfeeding<br>
-			<input type="radio" name="Availability" value="both">Both<br>
-			<input type="radio" name="Availability" value="neither">Neither<br>
+			<input type="checklist" name="baby" value="diaper_changing">Diaper-Changing<br>
+			<input type="checklist" name="baby" value="breastfeeding">Breastfeeding<br>
+			<input type="checklist" name="baby" value="both">Both<br>
+			<input type="checklist" name="baby" value="neither">Neither<br>
 
 		
 		<br>
@@ -245,29 +245,28 @@ Which genders have restroom access here? Check all that apply.
 		How many sinks are there?<br>
 
 			  Number:<br>
-			<input type="radio" name="number" value="0"> 0 
-		  	<input type="radio" name="number" value="1"> 1 
-		 	<input type="radio" name="number" value="2"> 2 
-		  	<input type="radio" name="number" value="3"> 3 
-		  	<input type="radio" name="number" value="4"> 4 
-		  	<input type="radio" name="number" value="5"> 5 
-		  	<input type="radio" name="number" value="5+"> 5+
+			<input type="radio" name="sinks" value="0"> 0 
+		  	<input type="radio" name="sinks" value="1"> 1 
+		 	<input type="radio" name="sinks" value="2"> 2 
+		  	<input type="radio" name="sinks" value="3"> 3 
+		  	<input type="radio" name="sinks" value="4"> 4 
+		  	<input type="radio" name="sinks" value="5"> 5+
 		  	<br>
 		
 
 		<h1>Handicap Services</h1>
 		Are there accomodations for people with disabilities?<br>
 		
-			<input type="radio" name="Yes or No" value="yes"> Yes<br>
-			<input type="radio" name="Yes or No" value="no"> No<br>
+			<input type="radio" name="handicap" value="yes"> Yes<br>
+			<input type="radio" name="handicap" value="no"> No<br>
 		
 
 		<h1>Hand-Drying Options</h1>
 		What hand drying options are there?<br>
 		
-			<input type="radio" name="options" value="blowdryer"> Blowdryer<br>
-			<input type="radio" name="options" value="paper towel">Paper Towel<br>
-			<input type="radio" name="options" value="both"> Both<br>
+			<input type="radio" name="dry" value="blowdryer"> Blowdryer<br>
+			<input type="radio" name="dry" value="paper_towel">Paper Towel<br>
+			<input type="radio" name="dry" value="both"> Both<br>
 		
 
 		<br><br>
