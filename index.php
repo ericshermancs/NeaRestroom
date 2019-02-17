@@ -111,7 +111,7 @@
 				  }
 				}
 				</script>
-				`
+				`;
 			}
 			mark.bindPopup(html);
 			mark.addTo(mymap);
