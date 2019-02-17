@@ -529,7 +529,7 @@ window.onclick = function(event) {
 			if(j[i].reviews[rl-1].comment.length > 50){
 				html += '...';
 			}
-			html +='<br> <button id="myBtn">Rate this bathroom</button>'
+			html+=`
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -603,7 +603,7 @@ function toilets(number){
 slider.oninput = function() {
   output.innerHTML = toilets(this.value);
 }
-</script>
+<\/script>
 <br>
 
 <style>
@@ -668,7 +668,7 @@ function toilets(number){
 slider2.oninput = function() {
   output2.innerHTML = toilets(this.value);
 }
-</script>
+<\/script>
 
 
 		<style>
@@ -915,8 +915,9 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-  </script>
-</div>";
+  <\/script>
+</div>`;
+			html +="<br> <button onclick=action()>Rate this bathroom</button>";
 			mark.bindPopup(html);
 			mark.addTo(mymap);
 			if(shortest_distance < 0){
