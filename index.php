@@ -406,15 +406,15 @@ Which genders have restroom access here?
   <script>
   	/* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
-function doStuff(position) {
+function doStuff() {
   document.getElementById("myDropdown").classList.toggle("show");
-  var userLat = position.coords.latitude;
-  var userLon = position.coords.longitude;
+
   document.getElementById('latitude').value = userLat;
   document.getElementById('longitude').value = userLon;
 }
 function myFunction(){
-  navigator.geolocation.getCurrentPosition(doStuff);
+	doStuff();
+  //navigator.geolocation.getCurrentPosition(doStuff);
 
 }
 
