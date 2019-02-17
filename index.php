@@ -336,6 +336,8 @@
         	  <div class="modal-content">
 			    <span class="close" onclick="(function(){document.getElementById('myModal2').style.display='none'})();">&times;</span>
 			    <form action="updateDB.php" method="POST">
+			    	<h1>Cleanliness Level</h1>
+                    <p>Drag the slider to indicate overall cleanlines level</p>
 			    	<div class="slidecontainer">
 			    		<input type="range" name="cleanliness_level" min="1" max="10" value="10" class="slider" id="myRange3">
 			    		<p>Value: <span id="demo3"></span></p>
@@ -357,6 +359,8 @@
                         }
                     </script>
 
+                    <h1>Overall Rating</h1>
+                    <p>Drag the slider to indicate overall rating of the bathroom</p>
 
 			    	<div class="slidecontainer">
 			    		<input type="range" name="overall_rating" min="1" max="10" value="10" class="slider" id="myRange4">
