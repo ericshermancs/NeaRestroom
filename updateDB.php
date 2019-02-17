@@ -35,6 +35,9 @@
     }
 
     function addRestroom (){
+        if(!is_numeric($_POST['latitude']) or !is_numeric($_POST['longitude'])){
+            return;
+        }
         //$name, $cleanliness_level, $rating, $sinks, $dry, $gender, $latitude, $longitude, $unique_id, $categories;
         $time = microtime();
         $pattern = '/\s+/';
