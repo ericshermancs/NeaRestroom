@@ -39,6 +39,7 @@
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
+<div id="myModal2" class="modal">
 
   <!-- Modal content -->
   <div class="modal-content">
