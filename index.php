@@ -53,11 +53,23 @@
 		
 		console.log(j);
 		console.log(j[1].latitude, j[1].longitude)
+		var poopEmoji = L.icon({
+			iconUrl: 'poop_emoji.png', 
+			iconSize: [28, 34],
+			iconAnchor: [64, 122],
+			popupAnchor: [-3, -76]
+		});
+
 		L.Routing.control({
-		  waypoints: [
+		  plan: L.Routing.Plan([
 		    L.latLng(userLat, userLon),
 		    L.latLng(j[1].latitude, j[1].longitude)
-		  ]
+		  ],
+		  createMarker: function (i, wp, np = 2) {
+			if (i == 1) {
+				return L.marker(wp.latLng, {icon: poopEmoji });
+			}
+		})
 		}).addTo(mymap);
 	}
 
