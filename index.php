@@ -39,6 +39,7 @@
 
     <div class="dropdown">
         <button id="myBtn" class="dropbtn">Add New Bathroom</button>
+        <button id="collapseItinerary" value="hide" style="z-index: 10000">Hide Directions</button>
         <div id="myDropdown" class="dropdown-content">
             <!--<a id="myBtn" style="font-family: Arial Black, Gadget, sans-serif; size: 20pt">Add New Bathroom</a>-->
 
@@ -660,6 +661,20 @@
                 
                 
             }).addTo(mymap);
+
+            document.getElementById('collapseItinerary').onclick = function(){
+                let text = document.getElementById('collapseItinerary').textContent;
+                let value = 'block';
+                if(text=='hide'){ 
+                    value = 'none';
+                }
+                var controls = document.getElementsByClassName("leaflet-routing-container");
+                for(var i=0; i < controls.length; i++){
+                    controls[i].style.display = value;
+                }
+                
+
+            }
 
         }
         /*
