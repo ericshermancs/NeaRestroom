@@ -664,12 +664,16 @@
 
             document.getElementById('collapseItinerary').onclick = function(){
                 let text = document.getElementById('collapseItinerary').value;
-                console.log(text);
+                
+
                 let value = 'block';
                 document.getElementById('collapseItinerary').value = 'hide';
+                document.getElementById('collapseItinerary').textContent = 'Hide Directions'
+
                 if(text=='hide'){ 
                     value = 'none';
                     document.getElementById('collapseItinerary').value = 'show';
+                    document.getElementById('collapseItinerary').textContent = 'Show Directions'
 
                 }
                 var controls = document.getElementsByClassName("leaflet-routing-container");
