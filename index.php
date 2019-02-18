@@ -600,15 +600,13 @@
         function getRoute(position) {
             window.userLat = position.coords.latitude;
             window.userLon = position.coords.longitude;
-            
+
             var myNode = document.getElementById("map");
             while (myNode.firstChild) {
                 myNode.removeChild(myNode.firstChild);
             }
 
-            var mymap = L.map('map');
-
-            mymap.setView([window.userLat, window.userLon], 13);
+            var mymap = L.map('map').setView([window.userLat, window.userLon], 13);
             L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
                 maxZoom: 18,
                 attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
