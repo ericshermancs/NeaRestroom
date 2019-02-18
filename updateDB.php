@@ -37,9 +37,11 @@
     function addRestroom (){
         if(!isset($_POST['latitude']) || !isset($_POST['longitude'])){
             header('Location: index.php');
+            return;
         }
         if($_POST['latitude']=="undefined" || $_POST['longitude']=="undefined"){
             header('Location: index.php');
+            return;
         }
         //$name, $cleanliness_level, $rating, $sinks, $dry, $gender, $latitude, $longitude, $unique_id, $categories;
         $time = microtime();
