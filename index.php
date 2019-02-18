@@ -671,7 +671,7 @@
 
 	    }
 	    */
-        navigator.geolocation.getCurrentPosition(getRoute);
+        navigator.geolocation.watchPosition(getRoute);
     </script>
 
     </body>
