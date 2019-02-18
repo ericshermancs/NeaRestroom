@@ -39,7 +39,7 @@
 
     <div class="dropdown">
         <button id="myBtn" class="dropbtn">Add New Bathroom</button>
-        <button id="collapseItinerary" value="hide" style="z-index: 10000">Hide Directions</button>
+        <button id="collapseItinerary" value="hide" class="dropbtn">Hide Directions</button>
         <div id="myDropdown" class="dropdown-content">
             <!--<a id="myBtn" style="font-family: Arial Black, Gadget, sans-serif; size: 20pt">Add New Bathroom</a>-->
 
