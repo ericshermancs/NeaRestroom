@@ -685,6 +685,10 @@
             for(var i=0; i < zoom.length; i++){
                 zoom[i].style.display = 'none';
             }
+            var bar = document.getElementsByClassName('leaflet-bar');
+            for(var i=0; i < bar.length; i++){
+                bar[i].style.top = '60px';
+            }
 
         }
         /*
