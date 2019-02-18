@@ -663,7 +663,7 @@
             }).addTo(mymap);
 
             document.getElementById('collapseItinerary').onclick = function(){
-                let text = document.getElementById('collapseItinerary').textContent;
+                let text = document.getElementById('collapseItinerary').value;
                 console.log(text);
                 let value = 'block';
                 if(text=='hide'){ 
