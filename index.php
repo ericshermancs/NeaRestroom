@@ -666,15 +666,20 @@
                 let text = document.getElementById('collapseItinerary').value;
                 console.log(text);
                 let value = 'block';
+                document.getElementById('collapseItinerary').value = 'hide';
                 if(text=='hide'){ 
                     value = 'none';
+                    document.getElementById('collapseItinerary').value = 'show';
+
                 }
                 var controls = document.getElementsByClassName("leaflet-routing-container");
                 for(var i=0; i < controls.length; i++){
                     controls[i].style.display = value;
                 }
-                
-
+            }
+            var zoom = document.getElementsByClassName('leaflet-control-zoom');
+            for(var i=0; i < zoom.length; i++){
+                zoom[i].style.display = 'none';
             }
 
         }
