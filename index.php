@@ -664,6 +664,7 @@
 
             document.getElementById('collapseItinerary').onclick = function(){
                 let text = document.getElementById('collapseItinerary').textContent;
+                console.log(text);
                 let value = 'block';
                 if(text=='hide'){ 
                     value = 'none';
