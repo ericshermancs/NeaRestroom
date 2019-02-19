@@ -608,7 +608,7 @@
             */
             let preset_location = (document.cookie.match(/^(?:.*;)?\s*location\s*=\s*([^;]+)(?:.*)?$/)||[,null])[1]
             let preset_zoom = (document.cookie.match(/^(?:.*;)?\s*zoom\s*=\s*([^;]+)(?:.*)?$/)||[,null])[1]
-            if(preset_zoom==null || window.zoom==null){
+            if(preset_zoom==null && window.zoom==null){
                 window.zoom = 13;
             }
             console.log('L:'+preset_location);
