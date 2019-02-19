@@ -614,7 +614,7 @@
             if(preset_location!=null){
                 window.userLat = parseFloat(preset_location.split(',')[0]);
                 window.userLat = parseFloat(preset_location.split(',')[1]);
-                window.zoom = parseFloat(preset_zoom);
+                //window.zoom = parseFloat(preset_zoom);
 
             }
 
