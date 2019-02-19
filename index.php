@@ -617,7 +617,7 @@
             }).addTo(mymap);
 
             mymap.on('move', function(){
-                document.cookie = 'location=' + mymap.getCenter().toString();
+                document.cookie = 'location=' + mymap.getCenter().lat +"," + mymap.getCenter().lng;
             })
 
             var j = <?php echo readDB();?>;
