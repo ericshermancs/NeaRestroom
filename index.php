@@ -606,6 +606,11 @@
                 myNode.removeChild(myNode.firstChild);
             }
             */
+            let preset_location = (document.cookie.match(/^(?:.*;)?\s*location\s*=\s*([^;]+)(?:.*)?$/)||[,null])[1]
+            if (preset_location){
+                window.userLat = preset_location.split(',')[0];
+                window.userLat = preset_location.split(',')[1];
+            }
 
             var mymap = L.map('map').setView([window.userLat, window.userLon], 13);
             L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
