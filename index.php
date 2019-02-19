@@ -614,9 +614,9 @@
             console.log('L:'+preset_location);
             if(preset_location!=null){
                 window.userLat = parseFloat(preset_location.split(',')[0]);
-                console.log(preset_location.split(',')[0]);
-                console.log(parseFloat(preset_location.split(',')[0]));
-                window.userLat = parseFloat(preset_location.split(',')[1]);
+                //console.log(preset_location.split(',')[0]);
+                //console.log(parseFloat(preset_location.split(',')[0]));
+                window.userLon = parseFloat(preset_location.split(',')[1]);
                 //window.zoom = parseFloat(preset_zoom);
                 console.log("PRESET: "+window.userLat+","+window.userLon);
 
