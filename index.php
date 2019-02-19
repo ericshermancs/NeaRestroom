@@ -606,7 +606,7 @@
                 myNode.removeChild(myNode.firstChild);
             }
             */
-            
+
             var mymap = L.map('map').setView([window.userLat, window.userLon], 13);
             L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
                 maxZoom: 18,
@@ -634,9 +634,10 @@
                     icon: poopEmoji
                 });
                 let rl = j[i].reviews.length;
-                let html = "Average Rating: " + j[i].overall_rating;
-                html += "<br> Cleanliness Rating: " + j[i].cleanliness_level;
-                html += "<br> Gender: " + j[i].gender + ". Distance: " +
+                let html = "Name: " + j[i].name;
+                html += "<br>Average Rating: " + j[i].overall_rating;
+                html += "<br>Cleanliness Rating: " + j[i].cleanliness_level;
+                html += "<br>Gender: " + j[i].gender + ". Distance: " +
                     dist + " Yds";
 
                 html += "<br> " + j[i].reviews[rl - 1].comment;
