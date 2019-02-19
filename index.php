@@ -616,6 +616,10 @@
                 id: 'mapbox.streets'
             }).addTo(mymap);
 
+            mymap.on('zoom', function(){
+                document.cookie = 'location=' + mymap.getCenter().toString();
+            })
+
             var j = <?php echo readDB();?>;
             console.log(j);
             var poopEmoji = L.icon({
