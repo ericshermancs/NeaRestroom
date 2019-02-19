@@ -628,6 +628,7 @@
             }).addTo(mymap);
 
             mymap.on('move', function(){
+                console.log( mymap.getCenter().lat +"," + mymap.getCenter().lng);
                 document.cookie = 'location=' + mymap.getCenter().lat +"," + mymap.getCenter().lng;
                 
             })
