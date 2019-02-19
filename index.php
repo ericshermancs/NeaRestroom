@@ -616,7 +616,7 @@
                 id: 'mapbox.streets'
             }).addTo(mymap);
 
-            mymap.on('zoom', function(){
+            mymap.on('move', function(){
                 document.cookie = 'location=' + mymap.getCenter().toString();
             })
 
