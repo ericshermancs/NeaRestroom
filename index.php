@@ -607,12 +607,18 @@
             }
             */
             let preset_location = (document.cookie.match(/^(?:.*;)?\s*location\s*=\s*([^;]+)(?:.*)?$/)||[,null])[1]
-            if (preset_location){
-                window.userLat = preset_location.split(',')[0];
-                window.userLat = preset_location.split(',')[1];
+            let preset_zoom = (document.cookie.match(/^(?:.*;)?\s*zoom\s*=\s*([^;]+)(?:.*)?$/)||[,null])[1]
+            if(preset_zoom==null){
+                window.zoom = 13;
+            }
+            if(preset_location!=null){
+                window.userLat = parseFloat(preset_location.split(',')[0]);
+                window.userLat = parseFloat(preset_location.split(',')[1]);
+                window.zoom = parseFloat(preset_zoom);
+
             }
 
-            var mymap = L.map('map').setView([window.userLat, window.userLon], 13);
+            var mymap = L.map('map').setView([window.userLat, window.userLon], window.zoom);
             L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
                 maxZoom: 18,
                 attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
@@ -623,6 +629,10 @@
 
             mymap.on('move', function(){
                 document.cookie = 'location=' + mymap.getCenter().lat +"," + mymap.getCenter().lng;
+                
+            })
+            mymap.on('zoom',function(){
+                document.cookie = 'zoom=' + mymap.getZoom();
             })
 
             var j = <?php echo readDB();?>;
