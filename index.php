@@ -640,12 +640,16 @@
             }).addTo(mymap);
 
             mymap.on('move', function(){
+<<<<<<< HEAD
                 console.log( mymap.getCenter().lat +"," + mymap.getCenter().lng);
                 document.cookie = 'location=' + mymap.getCenter().lat +"," + mymap.getCenter().lng;
                 
             })
             mymap.on('zoom',function(){
                 document.cookie = 'zoom=' + mymap.getZoom();
+=======
+                document.cookie = 'location=' + mymap.getCenter().toString();
+>>>>>>> parent of 20ed133... add cookie to track map center
             })
 
             var j = <?php echo readDB();?>;
