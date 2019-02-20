@@ -598,8 +598,7 @@
         }
 
         function getRoute(position) {
-            window.userLat = position.coords.latitude;
-            window.userLon = position.coords.longitude;
+
             /*
             var myNode = document.getElementById("map");
             while (myNode.firstChild) {
@@ -624,6 +623,10 @@
                 //window.zoom = parseFloat(preset_zoom);
                 console.log("PRESET: "+window.userLat+","+window.userLon);
 
+            }
+            else{
+                window.userLat = position.coords.latitude;
+                window.userLon = position.coords.longitude;
             }
 
             var mymap = L.map('map').setView([window.userLat, window.userLon], window.zoom);
