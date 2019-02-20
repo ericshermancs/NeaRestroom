@@ -609,7 +609,7 @@
             let preset_zoom = (document.cookie.match(/^(?:.*;)?\s*zoom\s*=\s*([^;]+)(?:.*)?$/)||[,null])[1]
             if(preset_zoom==null){
                 window.zoom = 13;
-                document.cookie = 'zoom=' + mymap.getZoom();
+                document.cookie = 'zoom=' + "13";
             }
             else{
                 window.zoom = preset_zoom;
