@@ -608,8 +608,12 @@
             */
             let preset_location = (document.cookie.match(/^(?:.*;)?\s*location\s*=\s*([^;]+)(?:.*)?$/)||[,null])[1]
             let preset_zoom = (document.cookie.match(/^(?:.*;)?\s*zoom\s*=\s*([^;]+)(?:.*)?$/)||[,null])[1]
-            if(preset_zoom==null || window.zoom==null){
+            if(preset_zoom==null){
                 window.zoom = 13;
+                document.cookie = 'zoom=' + mymap.getZoom();
+            }
+            else{
+                window.zoom = preset_zoom;
             }
             console.log('L:'+preset_location);
             if(preset_location!=null){
