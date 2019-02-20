@@ -728,7 +728,7 @@
                 bar[i].style.top = '60px';
             }
 
-            mymap.setView([window.userLat, window.userLon], window.zoom);
+            mymap.flyTo([window.userLat, window.userLon], window.zoom);
         }
         /*
         try{
