@@ -727,7 +727,7 @@
             for(var i=0; i < bar.length; i++){
                 bar[i].style.top = '60px';
             }
-
+            console.log(window.userLat, window.userLon);
             mymap.flyTo([window.userLat, window.userLon], window.zoom);
         }
         /*
