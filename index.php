@@ -657,7 +657,8 @@
             var closest_index;
             var shortest_distance = -1;
             for (i = 0; i < j.length; i++) {
-                let dist = Math.floor(distanceInYdBetweenEarthCoordinates(j[i].latitude, j[i].longitude, window.userLat, window.userLon));
+                let dist = Math.floor(distanceInYdBetweenEarthCoordinates(j[i].latitude, j[i].longitude, 
+                    position.coords.latitude, position.coords.longitude));
                 let mark = L.marker([j[i].latitude, j[i].longitude], {
                     icon: poopEmoji
                 });
