@@ -691,7 +691,7 @@
             console.log(j[1].latitude, j[1].longitude)
             L.Routing.control({
                 waypoints: [
-                    L.latLng(window.userLat, window.userLon),
+                    L.latLng(position.coords.latitude, position.coords.longitude),
                     L.latLng(j[closest_index].latitude, j[closest_index].longitude)
                 ],
                 
